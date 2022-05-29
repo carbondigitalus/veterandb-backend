@@ -23,6 +23,20 @@ tsDBConnect
         console.log('MySQL Database Connection Status: success');
     })
     .catch((error: any) => console.log(error));
+
+// Enable Ports based on ENV
+let port: any;
+let appEnv = process.env.NODE_ENV;
+const getPort = (appEnv: any) => {
+    if (appEnv === 'production') {
+        port = process.env.PORT_PROD;
+    } else if (appEnv === 'development') {
+        port = process.env.PORT_DEV;
+    } else {
+        port = process.env.PORT_TEST;
+    }
+    return port;
+};
 // Uncaught Exceptions
 process.on('uncaughtException', (err) => {
     console.log('UNCAUGHT EXCEPTION! Shutting down...');
