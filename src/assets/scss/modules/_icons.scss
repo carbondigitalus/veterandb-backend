@@ -1,0 +1,35 @@
+// ==========================================================================
+// Icons
+// ==========================================================================
+
+// Logo
+
+.site-logo {
+	@include img-replace("logo.svg", 115px, 45px, inline-block);
+}
+
+// UI
+
+.icn {
+
+	// Nav Toggle
+	@include bem_mod(nav-toggle) {
+		@extend %icn--ui;
+		font-size : em(18px);
+		border-top: solid 3px palette(neutral);
+		border-bottom: solid 3px palette(neutral);
+		position: relative;
+		@include p-el(before, 25px, 3px) {
+			background: palette(neutral, light);
+			top: 4px;
+		}
+	}
+	// Form icons
+	@include bem_el(form) {
+		font-size : em(18px);
+		position: absolute;
+		top: 25%;
+		right: 25px;
+		color: palette(neutral, dark);
+	}
+}

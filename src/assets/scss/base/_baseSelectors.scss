@@ -1,0 +1,87 @@
+// ==========================================================================
+// Base Selector Styles
+// ==========================================================================
+
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+.flex {
+	display: flex;
+}
+.flex-justify-center {
+	justify-content: center;
+}
+.m-20 {
+	margin: 20px;
+}
+.ml-20 {
+	margin-left: 20px;
+}
+.mr-20 {
+	margin-right: 20px;
+}
+.ml-10 {
+	margin-left: 10px;
+}
+.mr-10 {
+	margin-right: 10px;
+}
+.mt-10 {
+	margin-top: 10px;
+}
+.mb-10 {
+	margin-bottom: 10px;
+}
+.m-10 {
+	margin: 10px;
+}
+.mt-5 {
+	margin-top: 5px;
+}
+.bg-gray {
+	background-color: palette(neutral, xxx-light);
+}
+#appMainDashboard {
+	min-height: calc(100vh - 63.5px);
+	p {
+		color: black;
+	}
+	hr {
+		width: 25%;
+	}
+}
+#userbox {
+	width: 300px;
+}
+#userMenu {
+	position: absolute;
+	right: 50px;
+	top: 100px;
+	display: none;
+	h3,
+	h4 {
+		font-size: 1.5em;
+		color: palette(primary, dark);
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	h4 {
+		font-size: 1em;
+	}
+	li {
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	i {
+		margin-right: 10px;
+	}
+}
+.activeModal {
+	display: block !important;
+}
