@@ -148,14 +148,6 @@ Distributed under the GNU License. See `LICENSE.md` on the master branch for mor
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- CONTACT -->
-
-## Contact
-
-For any inquiries that are not specific to this repo, you can contact our team on our website [FortEmbr.com](https://fortembr.com/contact).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- ACKNOWLEDGMENTS -->
 
 ## Acknowledgments
