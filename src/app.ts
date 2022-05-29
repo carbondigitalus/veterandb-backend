@@ -64,3 +64,5 @@ app.use('/api', limiter);
 app.use(express.json({ limit: '10kb' }));
 // URL encoded middleware option
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
+// Cookie Parser, reading the data from the cookies
+app.use(cookieParser());
