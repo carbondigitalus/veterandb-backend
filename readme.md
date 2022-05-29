@@ -10,9 +10,8 @@
 <br />
 <div align="center">
 
-  <a href="https://github.com/fortembr/pawn-markdown-private">
-    <img src="_repo/logo-dark.png#gh-dark-mode-only" alt="Logo" width="400" height="">
-    <img src="_repo/logo-light.png#gh-light-mode-only" alt="Logo" width="400" height="">
+  <a href="https://github.com/carbondigitalus/veterandb-backend/">
+    <img src="_repo/logo-dark.png" alt="Logo" width="400" height="">
   </a>
 
   <h3 align="center">Pawn Markdown</h3>
