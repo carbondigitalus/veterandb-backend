@@ -20,3 +20,5 @@ const app: Application = express();
 
 // Setup Trust for Proxies (needed for Heroku)
 app.enable('trust proxy');
+
+// Template Engines
