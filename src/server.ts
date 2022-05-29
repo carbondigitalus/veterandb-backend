@@ -23,3 +23,11 @@ tsDBConnect
         console.log('MySQL Database Connection Status: success');
     })
     .catch((error: any) => console.log(error));
+// Uncaught Exceptions
+process.on('uncaughtException', (err) => {
+    console.log('UNCAUGHT EXCEPTION! Shutting down...');
+    console.log(err.name, err.message);
+    server.close(() => {
+        process.exit(1);
+    });
+});
