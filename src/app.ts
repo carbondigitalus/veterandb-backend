@@ -85,6 +85,9 @@ app.use(
 // Compression Middleware
 app.use(compression());
 
+// Mounted API Routes
+const apiVersion = 'v1';
+const apiRoutes = `/api/${apiVersion}`;
 // Mounted View Routes
 // app.use('/', viewRouter);
 
