@@ -25,11 +25,11 @@ import 'reflect-metadata';
 
 // Custom Modules
 import { Match } from './../decorators/match.decorator';
-import { AccountStatus, UserRole } from './../../enums';
+import { AccountStatus } from './../../enums';
 
 // Middlware Variables
-let candidatePassword: string;
-let userPassword: string;
+let candidatePassword;
+let userPassword;
 @Entity()
 export default class User {
     // COLUMNS
@@ -73,6 +73,17 @@ export default class User {
     @Column({
         type: 'enum',
         enum: UserRole,
+
+        // this.EmployeeDevFrontEnd = 'employee-dev-front-end';
+        // this.EmployeeDevBackEnd = 'employee-dev-back-end';
+        // this.EmployeeDatabaseAdmin = 'employee-database-admin';
+        // this.EmployeeCustomerService = 'employee-customer-service';
+        // this.EmployeeTechSupport = 'employee-technical-support';
+        // this.EmployeeAdmin = 'employee-admin';
+        // this.EmployeeSuperAdmin = 'employee-super-admin';
+        // this.Customer = 'customer';
+
+
         default: UserRole.prototype.Customer
     })
     userRole: UserRole;
@@ -80,6 +91,11 @@ export default class User {
     @Column({
         type: 'enum',
         enum: AccountStatus,
+
+        // this.Active = 'active';
+        // this.Inactive = 'inactive';
+        // this.Hold = 'hold';
+        // this.Archived = 'archvied';
         default: AccountStatus.prototype.Active
     })
     accountStatus: AccountStatus;
