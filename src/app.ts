@@ -66,3 +66,5 @@ app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 // Cookie Parser, reading the data from the cookies
 app.use(cookieParser());
+// Data sanitization against XSS attacks
+app.use(xss());
