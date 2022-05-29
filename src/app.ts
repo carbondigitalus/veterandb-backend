@@ -90,3 +90,4 @@ app.all('*', (req: Request, res: Response, next: NextFunction) => {
     console.log(req, res);
     next(new AppError(`Can't find ${req.url} on this server!`, 404));
 });
+module.exports = app;
