@@ -16,3 +16,5 @@ import morgan from 'morgan';
 // Custom Modules
 
 // Variables
+const app: Application = express();
+
