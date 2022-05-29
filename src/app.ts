@@ -88,6 +88,7 @@ app.use(compression());
 // Mounted API Routes
 const apiVersion = 'v1';
 const apiRoutes = `/api/${apiVersion}`;
+app.use(`${apiRoutes}/users`, UserRouter);
 // Mounted View Routes
 // app.use('/', viewRouter);
 
