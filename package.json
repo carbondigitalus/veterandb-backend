@@ -1,2 +1,5 @@
 {
+    "name": "veterandb-backend",
+    "version": "0.0.1",
+    "description": "Veteran Database is the single resource for military Veterans.",
 }
