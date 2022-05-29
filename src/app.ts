@@ -42,3 +42,7 @@ app.use(cors());
 // Respond to Options request for CORS (pre-flight phase)
 // Required for METHODS PUT/ PATCH/ DELETE
 // app.options('*', cors());
+
+// Security HTTP Headers
+// Implementing helmet for the HTTP headers
+app.use(helmet());
