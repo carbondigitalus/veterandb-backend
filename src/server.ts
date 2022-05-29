@@ -37,6 +37,13 @@ const getPort = (appEnv: any) => {
     }
     return port;
 };
+
+// Enable Server
+const server = appServer.listen(getPort(appEnv), () => {
+    console.log(`Node App Running, Port: ${port}`);
+    console.log(`Current Node Environment: ${appEnv}`);
+});
+
 // Uncaught Exceptions
 process.on('uncaughtException', (err) => {
     console.log('UNCAUGHT EXCEPTION! Shutting down...');
