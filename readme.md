@@ -9,13 +9,10 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-
   <a href="https://github.com/carbondigitalus/veterandb-backend/">
     <img src="_repo/logo-dark.png" alt="Logo" width="400" height="">
   </a>
-
   <h3 align="center">Veteran Database Backend</h3>
-
   <p align="center">
     Veteran Database (VeteranDB) is a directory style website for all things Veteran. We aim to provide a single resource for military Veterans
     <br>
