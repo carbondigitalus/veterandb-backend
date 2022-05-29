@@ -29,3 +29,16 @@ app.set('views', `${__dirname}/views`);
 
 // Serving static files to the browser
 app.use(express.static(`${__dirname}/dist`));
+
+// Enable CORS
+app.use(cors());
+
+// Enable CORS internally
+// app.use(
+//   cors({
+//     origin: 'https://veterandb.com'
+//   })
+// );
+// Respond to Options request for CORS (pre-flight phase)
+// Required for METHODS PUT/ PATCH/ DELETE
+// app.options('*', cors());
