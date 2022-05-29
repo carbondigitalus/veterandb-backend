@@ -23,3 +23,4 @@ app.enable('trust proxy');
 
 // Template Engines
 app.set('view engine', 'pug');
+app.set('views', `${__dirname}/views`);
