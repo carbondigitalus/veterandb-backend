@@ -15,4 +15,8 @@
         "webpack:dev": "webpack",
         "webpack:prod": "webpack --config webpack.config.prod.js"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/carbondigitalus/veterandb-backend.git"
+    },
 }
