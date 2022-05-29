@@ -8,3 +8,4 @@ const xss = require('xss-clean');
 import cookieParser from 'cookie-parser';
 import compression from 'compression';
 import cors from 'cors';
+import express, { Application, Request, Response, NextFunction } from 'express';
