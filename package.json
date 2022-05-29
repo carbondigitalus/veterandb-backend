@@ -2,4 +2,17 @@
     "name": "veterandb-backend",
     "version": "0.0.1",
     "description": "Veteran Database is the single resource for military Veterans.",
+    "scripts": {
+        "coverage": "cross-env NODE_ENV=development nyc --reporter=text npm test",
+        "db:help": "typeorm -h",
+        "start:dev": "NODE_ENV=development nodemon --watch './**/*.ts' --exec 'ts-node' src/server.ts",
+        "start:prod": "NODE_ENV=development nodemon --watch './**/*.ts' --exec 'ts-node' src/server.ts",
+        "start:test": "NODE_ENV=development nodemon --watch './**/*.ts' --exec 'ts-node' src/server.ts",
+        "style": "sass public/css/scss/style.scss:public/css/style.css",
+        "style:min": "sass public/css/scss/style.scss:public/css/style.css --style=compressed",
+        "style:watch": "sass --watch public/css/scss/style.scss:public/css/style.css",
+        "test:ts": "NODE_ENV=development mocha --config test/_setup/mocha/.mocharc.jsonc",
+        "webpack:dev": "webpack",
+        "webpack:prod": "webpack --config webpack.config.prod.js"
+    },
 }
