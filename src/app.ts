@@ -46,3 +46,9 @@ app.use(cors());
 // Security HTTP Headers
 // Implementing helmet for the HTTP headers
 app.use(helmet());
+
+// Development environment (for logging)
+if (process.env.NODE_ENV === 'development') {
+    app.use(morgan('dev'));
+}
+
