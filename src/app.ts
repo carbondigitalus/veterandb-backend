@@ -7,3 +7,4 @@ const xss = require('xss-clean');
 // NPM Module Classes
 import cookieParser from 'cookie-parser';
 import compression from 'compression';
+import cors from 'cors';
