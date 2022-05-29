@@ -2,6 +2,7 @@
     "name": "veterandb-backend",
     "version": "0.0.1",
     "description": "Veteran Database is the single resource for military Veterans.",
+    "main": "server.ts",
     "scripts": {
         "coverage": "cross-env NODE_ENV=development nyc --reporter=text npm test",
         "db:help": "typeorm -h",
