@@ -62,3 +62,5 @@ app.use('/api', limiter);
 
 // Body parser, reading data from the body into req.body
 app.use(express.json({ limit: '10kb' }));
+// URL encoded middleware option
+app.use(express.urlencoded({ extended: true, limit: '10kb' }));
