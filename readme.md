@@ -9,17 +9,19 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/carbondigitalus/veterandb-backend/">
-    <img src="_repo/logo-dark.png" alt="Logo" width="400" height="">
+  <a href="https://github.com/fortembr/pawn-markdown-private">
+    <img src="_repo/logo.png" alt="Logo" width="400" height="">
   </a>
-  <h3 align="center">Veteran Database Backend</h3>
+
+  <h3 align="center">Pawn Markdown</h3>
+
   <p align="center">
-    Veteran Database (VeteranDB) is a directory style website for all things Veteran. We aim to provide a single resource for military Veterans
+    This project was inspired by <a href="https://github.com/amitmerchant1990/markdownify-web" target="_blank">Markdownify Web</a>, the <a href="http://demo.showdownjs.com/" target="_blank">Showdown JS Editor</a> and <a href="https://github.com/benweet/stackedit" target="_blank">Stack Edit</a>.
     <br>
     <br>
-    <a href="https://app.veterandb.com" target="_blank">View Website</a>
+    <a href="https://pawn.fortembr.com" target="_blank">View Website</a>
     ·
-    <a href="https://roadmap.veterandb.com" target="_blank">Features &amp; Bugs</a>
+    <a href="https://github.com/fortembr/pawn-markdown/issues" target="_blank">Features &amp; Bugs</a>
     ·
     <a href="https://fortembr.com/discord" target="_blank">Discord Community</a>
   </p>
@@ -45,6 +47,8 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </aside>
@@ -84,7 +88,7 @@ To get a local copy up and running follow these simple example steps.
 
 1. Clone the repo
     ```sh
-    git clone https://github.com/carbondigitalus/veterandb-backend.git
+    git clone https://github.com/fortembr/pawn-markdown-private.git
     ```
 2. Navigate into folder
     ```sh
@@ -117,7 +121,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-Our offiical roadmap is located at <a href="https://roadmap.veterandb.com" target="_blank"></a>. You can see the full list of proposed features (and known issues). You can also join us on Discord (url at top of this file).
+We don't have an official roadmap yet. You can see the [open issues][issues-url] for a full list of proposed features (and known issues). You can also join us on Discord (url at top of this file).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -138,6 +142,22 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- LICENSE -->
+
+## License
+
+Distributed under the GNU License. See `LICENSE.md` on the master branch for more information.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- CONTACT -->
+
+## Contact
+
+For any inquiries that are not specific to this repo, you can contact our team on our website [FortEmbr.com](https://fortembr.com/contact).
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 <!-- ACKNOWLEDGMENTS -->
 
 ## Acknowledgments
@@ -146,8 +166,9 @@ Without these people and tools, life would be too complicated.
 
 -   Family and Friends.
 -   Ramen, Rice, Cheeseburgers and Pizza.
--   [Carbon Digital](https://carbondigital.us)
+-   [Fort Embr Team](https://fortembr.com)
 -   [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+-   [Img Shields](https://shields.io)
 -   [Font Awesome](https://fontawesome.com)
 -   [VS Code](https://code.visualstudio.com/)
 
@@ -156,13 +177,13 @@ Without these people and tools, life would be too complicated.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/carbondigitalus/veterandb-backend.svg?style=for-the-badge
-[contributors-url]: https://github.com/carbondigitalus/veterandb-backend/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/carbondigitalus/veterandb-backend.svg?style=for-the-badge
-[forks-url]: https://github.com/carbondigitalus/veterandb-backend/network/members
-[stars-shield]: https://img.shields.io/github/stars/carbondigitalus/veterandb-backend.svg?style=for-the-badge
-[stars-url]: https://github.com/carbondigitalus/veterandb-backend/stargazers
-[issues-shield]: https://img.shields.io/github/issues/carbondigitalus/veterandb-backend.svg?style=for-the-badge
-[issues-url]: https://github.com/carbondigitalus/veterandb-backend/issues
-[license-shield]: https://img.shields.io/github/license/carbondigitalus/veterandb-backend.svg?style=for-the-badge
-[license-url]: https://github.com/carbondigitalus/veterandb-backend/blob/master/LICENSE.md
+[contributors-shield]: https://img.shields.io/github/contributors/fortembr/pawn-markdown.svg?style=for-the-badge
+[contributors-url]: https://github.com/fortembr/pawn-markdown/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/fortembr/pawn-markdown.svg?style=for-the-badge
+[forks-url]: https://github.com/fortembr/pawn-markdown/network/members
+[stars-shield]: https://img.shields.io/github/stars/fortembr/pawn-markdown.svg?style=for-the-badge
+[stars-url]: https://github.com/fortembr/pawn-markdown/stargazers
+[issues-shield]: https://img.shields.io/github/issues/fortembr/pawn-markdown.svg?style=for-the-badge
+[issues-url]: https://github.com/fortembr/pawn-markdown/issues
+[license-shield]: https://img.shields.io/github/license/fortembr/pawn-markdown.svg?style=for-the-badge
+[license-url]: https://github.com/fortembr/pawn-markdown/blob/master/LICENSE.md

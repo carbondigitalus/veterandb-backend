@@ -1,5 +1,5 @@
 {
-    "name": "veterandb_app6371",
+    "name": "fortembr_pawnmd",
     "type": "mysql",
     "port": 3306,
     "synchronize": true,
