@@ -22,3 +22,4 @@ const app: Application = express();
 app.enable('trust proxy');
 
 // Template Engines
+app.set('view engine', 'pug');
