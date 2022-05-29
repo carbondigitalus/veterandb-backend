@@ -18,3 +18,5 @@ import morgan from 'morgan';
 // Variables
 const app: Application = express();
 
+// Setup Trust for Proxies (needed for Heroku)
+app.enable('trust proxy');
