@@ -81,3 +81,7 @@ app.use(
         ]
     })
 );
+
+// Compression Middleware
+app.use(compression());
+
