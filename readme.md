@@ -14,7 +14,7 @@
     <img src="_repo/logo-dark.png" alt="Logo" width="400" height="">
   </a>
 
-  <h3 align="center">Pawn Markdown</h3>
+  <h3 align="center">Veteran Database Backend</h3>
 
   <p align="center">
     This project was inspired by <a href="https://github.com/amitmerchant1990/markdownify-web" target="_blank">Markdownify Web</a>, the <a href="http://demo.showdownjs.com/" target="_blank">Showdown JS Editor</a> and <a href="https://github.com/benweet/stackedit" target="_blank">Stack Edit</a>.
