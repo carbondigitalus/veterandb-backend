@@ -89,7 +89,7 @@ To get a local copy up and running follow these simple example steps.
 
 1. Clone the repo
     ```sh
-    git clone https://github.com/fortembr/pawn-markdown-private.git
+    git clone https://github.com/carbondigitalus/veterandb-backend.git
     ```
 2. Navigate into folder
     ```sh
@@ -167,9 +167,8 @@ Without these people and tools, life would be too complicated.
 
 -   Family and Friends.
 -   Ramen, Rice, Cheeseburgers and Pizza.
--   [Fort Embr Team](https://fortembr.com)
+-   [Carbon Digital](https://carbondigital.us)
 -   [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
--   [Img Shields](https://shields.io)
 -   [Font Awesome](https://fontawesome.com)
 -   [VS Code](https://code.visualstudio.com/)
 
@@ -178,13 +177,13 @@ Without these people and tools, life would be too complicated.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/fortembr/pawn-markdown.svg?style=for-the-badge
-[contributors-url]: https://github.com/fortembr/pawn-markdown/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/fortembr/pawn-markdown.svg?style=for-the-badge
-[forks-url]: https://github.com/fortembr/pawn-markdown/network/members
-[stars-shield]: https://img.shields.io/github/stars/fortembr/pawn-markdown.svg?style=for-the-badge
-[stars-url]: https://github.com/fortembr/pawn-markdown/stargazers
-[issues-shield]: https://img.shields.io/github/issues/fortembr/pawn-markdown.svg?style=for-the-badge
-[issues-url]: https://github.com/fortembr/pawn-markdown/issues
-[license-shield]: https://img.shields.io/github/license/fortembr/pawn-markdown.svg?style=for-the-badge
-[license-url]: https://github.com/fortembr/pawn-markdown/blob/master/LICENSE.md
+[contributors-shield]: https://img.shields.io/github/contributors/carbondigitalus/veterandb-backend.svg?style=for-the-badge
+[contributors-url]: https://github.com/carbondigitalus/veterandb-backend/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/carbondigitalus/veterandb-backend.svg?style=for-the-badge
+[forks-url]: https://github.com/carbondigitalus/veterandb-backend/network/members
+[stars-shield]: https://img.shields.io/github/stars/carbondigitalus/veterandb-backend.svg?style=for-the-badge
+[stars-url]: https://github.com/carbondigitalus/veterandb-backend/stargazers
+[issues-shield]: https://img.shields.io/github/issues/carbondigitalus/veterandb-backend.svg?style=for-the-badge
+[issues-url]: https://github.com/carbondigitalus/veterandb-backend/issues
+[license-shield]: https://img.shields.io/github/license/carbondigitalus/veterandb-backend.svg?style=for-the-badge
+[license-url]: https://github.com/carbondigitalus/veterandb-backend/blob/master/LICENSE.md
