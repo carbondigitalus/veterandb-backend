@@ -23,4 +23,7 @@
     "author": "Fort Embr",
     "author": "Carbon Digital",
     "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/carbondigitalus/veterandb-backend/issues"
+    },
 }
