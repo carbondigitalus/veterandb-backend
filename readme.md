@@ -19,7 +19,7 @@
     <br>
     <a href="https://app.veterandb.com" target="_blank">View Website</a>
     ·
-    <a href="https://github.com/carbondigitalus/veterandb-backend/issues" target="_blank">Features &amp; Bugs</a>
+    <a href="https://roadmap.veterandb.com" target="_blank">Features &amp; Bugs</a>
     ·
     <a href="https://fortembr.com/discord" target="_blank">Discord Community</a>
   </p>
@@ -45,8 +45,6 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </aside>
@@ -119,7 +117,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-We don't have an official roadmap yet. You can see the [open issues][issues-url] for a full list of proposed features (and known issues). You can also join us on Discord (url at top of this file).
+Our offiical roadmap is located at <a href="https://roadmap.veterandb.com" target="_blank"></a>. You can see the full list of proposed features (and known issues). You can also join us on Discord (url at top of this file).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
