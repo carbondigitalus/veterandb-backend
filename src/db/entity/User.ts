@@ -71,7 +71,7 @@ export default class User {
     @Column({
         type: 'enum',
         enum: UserRole,
-        default: UserRole.prototype.Customer
+        default: UserRole.Customer
     })
     userRole: UserRole;
 
