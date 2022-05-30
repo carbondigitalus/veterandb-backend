@@ -47,4 +47,4 @@ router
     .route('/:id')
     .delete(AuthController.protectedRoutes, UserController.deleteUser);
 
-module.exports = router;
+export default router;
