@@ -34,7 +34,6 @@ router.use(
         'employee-super-admin'
     )
 );
-router.route('/:id').delete(UserController.prototype.deleteUser);
 router
     .route('/')
     .get(AuthController.protectedRoutes, UserController.getAllUsers);
@@ -47,5 +46,8 @@ router
 router
     .route('/:id')
     .patch(AuthController.protectedRoutes, UserController.updateUser);
+router
+    .route('/:id')
+    .delete(AuthController.protectedRoutes, UserController.deleteUser);
 
 module.exports = router;
