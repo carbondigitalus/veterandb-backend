@@ -83,7 +83,7 @@ const filterObj = (obj: any, ...allowedFields: any) => {
 };
 
 // Route Handling Section
-exports.getMe = (req: CustomRequest, res: Response, next: NextFunction) => {
+const getMe = (req: CustomRequest, res: Response, next: NextFunction) => {
     console.log('res: ' + res);
     req.params.id = req.user.id;
     next();
