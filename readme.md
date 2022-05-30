@@ -9,8 +9,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <img src="_repo/logo.png" alt="Logo" width="400" height="">
   <a href="https://github.com/carbondigitalus/veterandb-backend/">
+    <img src="_repo/logo-dark.png" alt="Logo" width="400" height="">
   </a>
 
   <h3 align="center">Pawn Markdown</h3>
