@@ -162,7 +162,7 @@ const login = CatchAsync(
             .createQueryBuilder()
             .select('user')
             .from(User, 'user')
-            .where('user.email = email', { email: email })
+            .where('user.email = :email', { email: email })
             .getOne();
 
         const isPasswordValid = await user.correctPassword(
