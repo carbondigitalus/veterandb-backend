@@ -51,7 +51,7 @@ function createSendToken(
     });
 }
 
-exports.forgotPassword = CatchAsync(
+const forgotPassword = CatchAsync(
     async (req: Request, res: Response, next: NextFunction) => {
         // 1. Get user based on POST email
         const user = await getConnection()
