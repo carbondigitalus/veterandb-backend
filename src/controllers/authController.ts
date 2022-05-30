@@ -182,7 +182,7 @@ const login = CatchAsync(
     }
 );
 
-exports.logout = (req: Request, res: Response) => {
+const logout = (req: Request, res: Response) => {
     console.log(req);
     res.cookie('jwt', 'loggedout', {
         expires: new Date(Date.now() + 10 * 1000),
