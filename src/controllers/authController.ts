@@ -148,7 +148,7 @@ const isLoggedIn = CatchAsync(
     }
 );
 
-exports.login = CatchAsync(
+const login = CatchAsync(
     async (req: Request, res: Response, next: NextFunction) => {
         const { email, password } = req.body;
         // 1. Check if the email and password exists
