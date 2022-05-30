@@ -157,7 +157,6 @@ Without these people and tools, life would be too complicated.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[license-shield]: https://img.shields.io/github/license/fortembr/pawn-markdown.svg?style=for-the-badge
 [license-url]: https://github.com/fortembr/pawn-markdown/blob/master/LICENSE.md
 [contributors-shield]: https://img.shields.io/github/contributors/carbondigitalus/veterandb-backend.svg?style=for-the-badge
 [contributors-url]: https://github.com/carbondigitalus/veterandb-backend/graphs/contributors
@@ -167,3 +166,4 @@ Without these people and tools, life would be too complicated.
 [stars-url]: https://github.com/carbondigitalus/veterandb-backend/stargazers
 [issues-shield]: https://img.shields.io/github/issues/carbondigitalus/veterandb-backend.svg?style=for-the-badge
 [issues-url]: https://github.com/carbondigitalus/veterandb-backend/issues
+[license-shield]: https://img.shields.io/github/license/carbondigitalus/veterandb-backend.svg?style=for-the-badge
