@@ -5,7 +5,6 @@ import crypto from 'crypto';
 import { Request, Response, NextFunction } from 'express';
 import jwt, { Secret } from 'jsonwebtoken';
 import { getConnection, MoreThan } from 'typeorm';
-import { AuthController } from '.';
 
 // Custom Modules
 import { User } from './../db/entity';
