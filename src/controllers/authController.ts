@@ -348,7 +348,7 @@ const restrictToRoles = (...roles: string[]) => {
     };
 };
 
-exports.updatePassword = CatchAsync(
+const updatePassword = CatchAsync(
     async (req: CustomRequest | any, res: Response, next: NextFunction) => {
         // 1. Get the user from the collection
         const user: any = await getConnection()
