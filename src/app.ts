@@ -16,7 +16,7 @@ import morgan from 'morgan';
 
 // Custom Modules
 import { ErrorController } from './controllers';
-import { UserRouter } from './routes';
+import UserRouter from './routes/userRoutes';
 import { AppError } from './utils';
 
 //Variables

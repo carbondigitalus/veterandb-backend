@@ -2,7 +2,9 @@
 import express from 'express';
 
 // Custom Modules
-import { AuthController, UserController } from './../controllers';
+// import { AuthController, UserController } from './../controllers';
+import AuthController from '../controllers/authController';
+import UserController from '../controllers/userController';
 
 const router = express.Router();
 
