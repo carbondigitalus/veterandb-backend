@@ -9,7 +9,6 @@ import UserController from '../controllers/userController';
 const router = express.Router();
 
 // Open to all users
-router.post('/account-register', AuthController.);
 router.post('/account-login', AuthController.prototype.login);
 router.get('/account-logout', AuthController.prototype.logout);
 router.post(
@@ -21,6 +20,7 @@ router.patch(
     AuthController.prototype.resetPassword
 );
 router.use(AuthController.prototype.protectedRoutes);
+router.post('/account-register', AuthController.register);
 router.patch(
     '/account-update-profile',
     UserController.prototype.uploadUserPhoto,
