@@ -191,7 +191,7 @@ const logout = (req: Request, res: Response) => {
     res.status(200).json({ status: 'success' });
 };
 
-exports.protectedRoutes = CatchAsync(
+const protectedRoutes = CatchAsync(
     async (req: CustomRequest, res: Response, next: NextFunction) => {
         // 1. Getting the token and check if it exists
         let token;
