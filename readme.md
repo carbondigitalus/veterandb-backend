@@ -21,7 +21,7 @@
     <br>
     <a href="https://app.veterandb.com" target="_blank">View Website</a>
     ·
-    <a href="https://github.com/fortembr/pawn-markdown/issues" target="_blank">Features &amp; Bugs</a>
+    <a href="https://roadmap.veterandb.com" target="_blank">Features &amp; Bugs</a>
     ·
     <a href="https://fortembr.com/discord" target="_blank">Discord Community</a>
   </p>
