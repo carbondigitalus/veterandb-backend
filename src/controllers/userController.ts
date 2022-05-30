@@ -89,7 +89,7 @@ const getMe = (req: CustomRequest, res: Response, next: NextFunction) => {
     next();
 };
 
-exports.updateMyProfile = CatchAsync(
+const updateMyProfile = CatchAsync(
     async (req: CustomRequest, res: Response, next: NextFunction) => {
         // 1. Create error if user POST password data
         if (req.body.password || req.body.passwordConfirm) {
