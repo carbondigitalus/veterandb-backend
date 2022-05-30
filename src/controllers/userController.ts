@@ -233,7 +233,7 @@ const getUser = () => {
     HandlerFactory.prototype.readOne(User);
 };
 // Update User doesn't update passwords
-exports.updateUser = () => {
+const updateUser = () => {
     HandlerFactory.prototype.updateOne(User);
 };
 exports.deleteUser = () => {
