@@ -218,7 +218,7 @@ const deactivateUser = CatchAsync(
     }
 );
 
-exports.createUser = (req: Request, res: Response) => {
+const createUser = (req: Request, res: Response) => {
     console.log('req: ' + req);
     res.status(500).json({
         status: 'error',
