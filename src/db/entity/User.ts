@@ -39,7 +39,6 @@ export default class User {
 
     @Column()
     @IsString()
-    @IsNotEmpty()
     firstName?: string;
 
     @Column()
