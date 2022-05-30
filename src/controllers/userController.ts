@@ -188,7 +188,7 @@ const deactivateUser = CatchAsync(
                 )
             );
         }
-        if (status === AccountStatus.prototype.Active) {
+        if (status === AccountStatus.Active) {
             // 3. check user's account for bills
             // 4. if all bills are not paid, account status is set to on-hold
             // 5. if all bills are paid, account status is set to inactive
