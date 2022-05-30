@@ -93,7 +93,7 @@ export default class User {
     @IsDate()
     passwordChangedAt: Date;
 
-    @Column()
+    @Column({ default: null })
     @IsString()
     passwordResetToken: string;
 
