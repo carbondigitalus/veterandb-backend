@@ -97,7 +97,7 @@ export default class User {
     @IsString()
     passwordResetToken: string;
 
-    @Column()
+    @Column({ default: null })
     @IsDate()
     passwordResetExpires: Date;
 
