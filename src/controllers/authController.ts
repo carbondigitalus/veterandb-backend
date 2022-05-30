@@ -28,7 +28,7 @@ function createSendToken(
     res: Response
 ) {
     // capture the token
-    const token = signToken(user.id.toString());
+    const token = signToken(user.id);
     // establish all cookie options for all environments
     // send the cookie to the browser
     res.cookie('jwt', token, {
