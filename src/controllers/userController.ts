@@ -239,3 +239,17 @@ const updateUser = () => {
 const deleteUser = () => {
     HandlerFactory.prototype.deleteOne(User);
 };
+
+export default {
+    createUser,
+    deactivateUser,
+    deleteUser,
+    getAllUsers,
+    getMe,
+    getUser,
+    resizeUserPhoto,
+    updateMyProfile,
+    updateUser,
+    uploadUserPhoto,
+    updateUserSettings
+};
