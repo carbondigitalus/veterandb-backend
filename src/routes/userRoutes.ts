@@ -34,10 +34,12 @@ router.use(
         'employee-super-admin'
     )
 );
-router.route('/').get(UserController. );
 router.route('/').post(UserController.prototype.createUser);
 router.route('/:id').get(UserController.prototype.getUser);
 router.route('/:id').patch(UserController.prototype.updateUser);
 router.route('/:id').delete(UserController.prototype.deleteUser);
+router
+    .route('/')
+    .get(AuthController.protectedRoutes, UserController.getAllUsers);
 
 module.exports = router;
