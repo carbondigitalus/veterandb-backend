@@ -331,7 +331,7 @@ const resetPassword = CatchAsync(
     }
 );
 
-exports.restrictToRoles = (...roles: string[]) => {
+const restrictToRoles = (...roles: string[]) => {
     // Give access to Roles ['admin', 'lead-guide']
     return (req: CustomRequest, res: Response, next: NextFunction) => {
         console.log(res);
