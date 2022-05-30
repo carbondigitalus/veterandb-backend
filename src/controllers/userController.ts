@@ -167,7 +167,7 @@ const updateUserSettings = CatchAsync(
     }
 );
 
-exports.deactivateUser = CatchAsync(
+const deactivateUser = CatchAsync(
     async (req: CustomRequest, res: Response, next: NextFunction) => {
         // 1. Find user info
         const user: any = await getConnection()
