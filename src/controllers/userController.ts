@@ -52,7 +52,7 @@ const upload = multer({
     fileFilter: multerFilter
 });
 
-exports.uploadUserPhoto = upload.single('profileAvatar');
+const uploadUserPhoto = upload.single('profileAvatar');
 
 // Image Middleware
 exports.resizeUserPhoto = CatchAsync(
