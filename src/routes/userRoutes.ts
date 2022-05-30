@@ -9,7 +9,6 @@ import UserController from '../controllers/userController';
 const router = express.Router();
 
 // Open to all users
-router.use(AuthController.prototype.protectedRoutes);
 router.post('/account-register', AuthController.register);
 router.post('/account-login', AuthController.login);
 router.get('/account-logout', AuthController.logout);
@@ -17,11 +16,13 @@ router.post('/account-password-forgot', AuthController.forgotPassword);
 router.patch('/account-password-reset/:token', AuthController.resetPassword);
 router.patch(
     '/account-update-profile',
+    AuthController.protectedRoutes,
     UserController.uploadUserPhoto,
     UserController.updateMyProfile
 );
 router.patch(
     '/account-update-settings',
+    AuthController.protectedRoutes,
     UserController.updateUserSettings
 );
 router.delete(
