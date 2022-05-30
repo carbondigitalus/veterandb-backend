@@ -180,7 +180,7 @@ const deactivateUser = CatchAsync(
         const status = user.accountStatus;
         // 2. verify user is active
 
-        if (status === AccountStatus.prototype.Hold) {
+        if (status === AccountStatus.Hold) {
             return next(
                 new AppError(
                     'Your account is currently on hold. Please contact us to resolve.',
