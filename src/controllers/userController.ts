@@ -135,7 +135,7 @@ const updateMyProfile = CatchAsync(
     }
 );
 
-exports.updateUserSettings = CatchAsync(
+const updateUserSettings = CatchAsync(
     async (req: CustomRequest, res: Response, next: NextFunction) => {
         // 1. Filtered out unwanted field names that are allowed to be updated.
         const filteredBody = filterObj(req.body);
