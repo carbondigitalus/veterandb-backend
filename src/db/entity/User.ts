@@ -15,11 +15,11 @@ import {
 } from 'class-validator';
 import { NextFunction } from 'express';
 import {
-    Column,
-    PrimaryGeneratedColumn,
-    Entity,
     BeforeInsert,
-    BeforeUpdate
+    BeforeUpdate,
+    Column,
+    Entity,
+    PrimaryGeneratedColumn
 } from 'typeorm';
 import 'reflect-metadata';
 
