@@ -226,7 +226,7 @@ const createUser = (req: Request, res: Response) => {
     });
 };
 
-exports.getAllUsers = () => {
+const getAllUsers = () => {
     HandlerFactory.prototype.readAll(User);
 };
 exports.getUser = () => {
