@@ -290,7 +290,7 @@ const register = CatchAsync(
     }
 );
 
-exports.resetPassword = CatchAsync(
+const resetPassword = CatchAsync(
     async (req: Request, res: Response, next: NextFunction) => {
         // 1. Get user based on the token
         const hashedToken = crypto
