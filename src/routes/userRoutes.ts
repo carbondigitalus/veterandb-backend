@@ -29,10 +29,7 @@ router.delete(
     UserController.deactivateUser
 );
 router.use(
-    AuthController.prototype.restrictToRoles(
-        'employee-admin',
-        'employee-super-admin'
-    )
+    AuthController.restrictToRoles('employee-admin', 'employee-super-admin')
 );
 router
     .route('/')
