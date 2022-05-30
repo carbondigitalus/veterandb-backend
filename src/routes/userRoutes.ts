@@ -17,8 +17,8 @@ router.post('/account-password-forgot', AuthController.forgotPassword);
 router.patch('/account-password-reset/:token', AuthController.resetPassword);
 router.patch(
     '/account-update-profile',
-    UserController.prototype.uploadUserPhoto,
     UserController.prototype.updateMyProfile
+    UserController.uploadUserPhoto,
 );
 router.patch(
     '/account-update-settings',
