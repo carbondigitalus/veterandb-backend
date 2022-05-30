@@ -383,4 +383,14 @@ const updatePassword = CatchAsync(
     }
 );
 
-module.exports = exports.AuthController;
+export default {
+    forgotPassword,
+    isLoggedIn,
+    login,
+    logout,
+    protectedRoutes,
+    register,
+    resetPassword,
+    restrictToRoles,
+    updatePassword
+};
