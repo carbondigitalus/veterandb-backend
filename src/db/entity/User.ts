@@ -78,7 +78,7 @@ export default class User {
     @Column({
         type: 'enum',
         enum: AccountStatus,
-        default: AccountStatus.prototype.Active
+        default: AccountStatus.Active
     })
     accountStatus: AccountStatus;
 
