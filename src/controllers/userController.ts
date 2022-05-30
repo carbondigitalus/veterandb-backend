@@ -229,7 +229,7 @@ const createUser = (req: Request, res: Response) => {
 const getAllUsers = () => {
     HandlerFactory.prototype.readAll(User);
 };
-exports.getUser = () => {
+const getUser = () => {
     HandlerFactory.prototype.readOne(User);
 };
 // Update User doesn't update passwords
