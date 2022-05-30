@@ -248,7 +248,7 @@ const protectedRoutes = CatchAsync(
     }
 );
 
-exports.register = CatchAsync(
+const register = CatchAsync(
     async (req: Request, res: Response, next: NextFunction) => {
         const user = await getConnection()
             .createQueryBuilder()
