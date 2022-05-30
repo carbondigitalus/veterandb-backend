@@ -55,7 +55,7 @@ const upload = multer({
 const uploadUserPhoto = upload.single('profileAvatar');
 
 // Image Middleware
-exports.resizeUserPhoto = CatchAsync(
+const resizeUserPhoto = CatchAsync(
     async (req: CustomRequest, res: Response, next: NextFunction) => {
         console.log('res: ' + res);
         // If there is no file, skip this function
