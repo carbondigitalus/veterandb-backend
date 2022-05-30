@@ -196,7 +196,7 @@ const deactivateUser = CatchAsync(
                 .createQueryBuilder()
                 .update(User)
                 .set({
-                    accountStatus: () => AccountStatus.prototype.Inactive,
+                    accountStatus: () => AccountStatus.Inactive,
                     isActiveAccount: false
                 })
                 .where('id = :id', { id: req.user.id })
