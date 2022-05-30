@@ -236,6 +236,6 @@ const getUser = () => {
 const updateUser = () => {
     HandlerFactory.prototype.updateOne(User);
 };
-exports.deleteUser = () => {
+const deleteUser = () => {
     HandlerFactory.prototype.deleteOne(User);
 };
