@@ -43,7 +43,6 @@ export default class User {
 
     @Column()
     @IsString()
-    @IsNotEmpty()
     lastName?: string;
 
     @Column({ unique: true })
