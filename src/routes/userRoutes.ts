@@ -22,7 +22,8 @@ router.patch(
 );
 router.patch(
     '/account-update-settings',
-    UserController.prototype.updateUserSettings
+    UserController.updateUserSettings
+);
 router.delete(
     '/account-deactivate',
     AuthController.protectedRoutes,
