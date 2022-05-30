@@ -23,8 +23,11 @@ router.patch(
 router.patch(
     '/account-update-settings',
     UserController.prototype.updateUserSettings
+router.delete(
+    '/account-deactivate',
+    AuthController.protectedRoutes,
+    UserController.deactivateUser
 );
-router.delete('/account-deactivate', UserController.prototype.deactivateUser);
 router.use(
     AuthController.prototype.restrictToRoles(
         'employee-admin',
