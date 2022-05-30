@@ -10,7 +10,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/carbondigitalus/veterandb-backend/">
-    <img src="_repo/logo-dark.png" alt="Logo" width="400" height="">
+    <img src="_repo/logo.png" alt="Logo" width="400" height="">
   </a>
   <h3 align="center">Veteran Database Backend</h3>
   <p align="center">
