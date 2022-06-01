@@ -131,13 +131,16 @@ export default class User {
         next();
     }
 
-    // METHODS
-    get correctPassword() {
+    @BeforeInsert()
+    @BeforeUpdate()
+    correctPassword() {
         return bcrypt.compare(candidatePassword, userPassword);
     }
 
-    get changedPasswordAfter() {
-        const newTime = (JWTTimestamp: Date) => {
+    @BeforeInsert()
+    @BeforeUpdate()
+    changedPasswordAfter(JWTTimestamp: Date) {
+        const newTime = () => {
             if (this.passwordChangedAt) {
                 const convertTime = (
                     this.passwordChangedAt.getTime() / 1000
@@ -153,7 +156,9 @@ export default class User {
         return newTime;
     }
 
-    get createPasswordResetToken() {
+    @BeforeInsert()
+    @BeforeUpdate()
+    createPasswordResetToken() {
         const resetToken = crypto.randomBytes(32).toString('hex');
         this.passwordResetToken = crypto
             .createHash('sha256')
