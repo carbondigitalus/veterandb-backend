@@ -1,7 +1,7 @@
 {
     "name": "veterandb-backend",
     "version": "0.0.1",
-    "description": "The markdown editor of the future.",
+    "description": "Veteran Database (VeteranDB) is a directory style website for all things Veteran. We aim to provide a single resource for military Veterans.",
     "main": "server.ts",
     "scripts": {
         "coverage": "cross-env NODE_ENV=development nyc --reporter=text npm test",
