@@ -13,7 +13,7 @@ const sandbox = sinon.createSandbox();
 
 // Custom Modules
 
-describe('Utility Tests', () => {
+describe('Utility Tests: AppError', () => {
     afterEach(() => {
         sandbox.restore();
     });
