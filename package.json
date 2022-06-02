@@ -1,5 +1,5 @@
 {
-    "name": "pawn-markdown-private",
+    "name": "veterandb-backend",
     "version": "0.0.1",
     "description": "The markdown editor of the future.",
     "main": "server.ts",
