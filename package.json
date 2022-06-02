@@ -18,14 +18,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/fortembr/pawn-md-web.git"
+        "url": "git+https://github.com/carbondigitalus/veterandb-backend.git"
     },
     "author": "Fort Embr",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/fortembr/pawn-md-web/issues"
+        "url": "https://github.com/carbondigitalus/veterandb-backend/issues"
     },
-    "homepage": "https://github.com/fortembr/pawn-md-web#readme",
+    "homepage": "https://github.com/carbondigitalus/veterandb-backend#readme",
     "devDependencies": {
         "@types/bcrypt": "^5.0.0",
         "@types/chai": "^4.3.0",
