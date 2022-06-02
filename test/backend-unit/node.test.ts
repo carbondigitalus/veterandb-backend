@@ -11,18 +11,18 @@ chai.use(chaiAsPromised);
 chai.use(sinonChai);
 const sandbox = sinon.createSandbox();
 
-describe('Core Tests', () => {
+describe('Node Core Tests', () => {
     afterEach(() => {
         sandbox.restore();
     });
 
     context('Env Tests', () => {
-        it('Node Version: should be v14.x or greater', (done) => {
+        it('Node Version: should be v16.x or greater', (done) => {
             const versionRaw = process.version;
             const versionMajor = versionRaw.split('v')[1];
             const versionNumber = parseInt(versionMajor);
             expect(versionNumber).to.be.a('number');
-            expect(versionNumber).to.be.at.least(14);
+            expect(versionNumber).to.be.at.least(16);
             done();
         });
         it('Node Env: should be development', (done) => {
