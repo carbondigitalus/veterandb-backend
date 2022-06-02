@@ -12,7 +12,7 @@
         "style": "sass public/css/scss/style.scss:public/css/style.css",
         "style:min": "sass public/css/scss/style.scss:public/css/style.css --style=compressed",
         "style:watch": "sass --watch public/css/scss/style.scss:public/css/style.css",
-        "test:ts": "NODE_ENV=development mocha --config test/_setup/mocha/.mocharc.jsonc",
+        "test:backend": "NODE_ENV=development mocha --config test/_setup/mocha/.mocharc.jsonc",
         "webpack:dev": "webpack",
         "webpack:prod": "webpack --config webpack.config.prod.js"
     },
