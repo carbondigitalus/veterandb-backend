@@ -23,7 +23,7 @@ app.enable('trust proxy');
 
 // Template Engine
 app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, '/views'));
+app.set('views', `${__dirname}/views`);
 
 // Serving static files to the browser
 app.use(express.static(path.join(__dirname, '/dist')));
