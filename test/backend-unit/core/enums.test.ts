@@ -43,21 +43,22 @@ describe('Node Core Tests', () => {
             const role: string[] = Object.keys(UserRole).map((item) => {
                 return item;
             });
-
+            // check length of array
             expect(role).to.have.lengthOf(8);
             done();
         });
-        // it('Enum: Account Status', (done) => {
-        //     // Active = 'active',
-        //     // Inactive = 'inactive',
-        //     // Hold = 'hold',
-        //     // Archived = 'archvied'
-        //     const versionRaw = process.version;
-        //     const versionMajor = versionRaw.split('v')[1];
-        //     const versionNumber = parseInt(versionMajor);
-        //     expect(versionNumber).to.be.a('number');
-        //     expect(versionNumber).to.be.at.least(16);
-        //     done();
-        // });
+        it('Enum: Account Status', (done) => {
+            expect(AccountStatus.Active).to.include('active');
+            expect(AccountStatus.Archived).to.include('archvied');
+            expect(AccountStatus.Hold).to.include('hold');
+            expect(AccountStatus.Inactive).to.include('inactive');
+            // create array from options
+            const status: string[] = Object.keys(AccountStatus).map((item) => {
+                return item;
+            });
+            // check length of array
+            expect(status).to.have.lengthOf(4);
+            done();
+        });
     });
 });
