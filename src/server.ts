@@ -50,4 +50,16 @@ const getPort = (appEnv: any) => {
     return port;
 };
 
+async function bootstrap() {
+    const app = await NestFactory.create<NestExpressApplication>(AppModule);
+    app.useGlobalPipes(
+        new ValidationPipe({
+            whitelist: true
+        })
+    );
+    await app.listen(getPort(appEnv), () => {
+        console.log(`Node App Running, Port: ${port}`);
+        console.log(`Current Node Environment: ${appEnv}`);
     });
+}
+bootstrap();
