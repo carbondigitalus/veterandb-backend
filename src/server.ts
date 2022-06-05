@@ -49,11 +49,6 @@ const getPort = (appEnv: any) => {
     return port;
 };
 
-// Enable Test Server
-const server = appServer.listen(getPort(appEnv), () => {
-    console.log(`Node App Running, Port: ${port}`);
-    console.log(`Current Node Environment: ${appEnv}`);
-});
 
 // Uncaught Exceptions
 process.on('uncaughtException', (err) => {
