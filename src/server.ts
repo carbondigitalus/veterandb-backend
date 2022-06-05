@@ -16,9 +16,6 @@ dotenv.config({
     path: './config.env'
 });
 
-// Import Express App from app.ts
-const appServer = require('./app');
-
 // Connect to MySQL DB
 tsDBConnect
     .createConnection({
