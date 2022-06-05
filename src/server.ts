@@ -6,9 +6,9 @@ require('reflect-metadata');
 // NPM Module Imports
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
 
 // Custom Modules
+import { AppModule } from './app.module';
 import { User } from './db/entity';
 
 // Enable Config File
