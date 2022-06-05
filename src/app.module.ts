@@ -7,7 +7,7 @@ import cookieParser from 'cookie-parser';
 import compression from 'compression';
 import cors from 'cors';
 import express, { Application, Request, Response, NextFunction } from 'express';
-import helmet from 'helmet';
+import * as helmet from 'helmet';
 import morgan from 'morgan';
 
 // Custom Modules
