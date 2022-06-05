@@ -26,7 +26,7 @@ app.set('view engine', 'pug');
 app.set('views', `${__dirname}/views`);
 
 // Serving static files to the browser
-app.use(express.static(path.join(__dirname, '/dist')));
+app.use(express.static(`${__dirname}/dist`));
 
 // Global Middleware Declarations
 
