@@ -1,4 +1,4 @@
 {
-    "require": ["test/_setup/mocha/init.js"],
+    "require": ["test/_setup/backend-unit/init.js"],
     "spec": ["test/backend-unit/*/*.test.ts"]
 }

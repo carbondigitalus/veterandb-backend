@@ -1,3 +1,3 @@
 require('ts-node').register({
-    project: 'test/_setup/mocha/tsconfig.json'
+    project: 'test/_setup/backend-unit/tsconfig.json'
 });
