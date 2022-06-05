@@ -6,6 +6,7 @@ require('reflect-metadata');
 // NPM Module Imports
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
+import { NestExpressApplication } from '@nestjs/platform-express';
 
 // Custom Modules
 import { AppModule } from './app.module';
