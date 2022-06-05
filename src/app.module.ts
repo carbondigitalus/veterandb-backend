@@ -77,19 +77,6 @@ app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 app.use(cookieParser());
 // Data sanitization against XSS attacks
 app.use(xss());
-// Prevent paramater pollution
-app.use(
-    hpp({
-        whitelist: [
-            'duration',
-            'ratingsQuantity',
-            'ratingsAverage',
-            'maxGroupSize',
-            'difficulty',
-            'price'
-        ]
-    })
-);
 
 // Compression Middleware
 app.use(compression());
