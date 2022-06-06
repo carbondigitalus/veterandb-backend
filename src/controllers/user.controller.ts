@@ -1,5 +1,5 @@
 // NPM Modules
-import { Body, Controller, Get, Patch, Put, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Put, UseGuards } from '@nestjs/common';
 import { User } from '@prisma/client';
 
 // Custom Modules
