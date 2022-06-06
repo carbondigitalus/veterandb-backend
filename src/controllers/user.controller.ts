@@ -1,5 +1,5 @@
 // NPM Modules
-import { Body, Controller, Get, Patch, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Patch, Put, UseGuards } from '@nestjs/common';
 import { User } from '@prisma/client';
 
 // Custom Modules
@@ -25,9 +25,9 @@ export class UserController {
         return user;
     }
 
-    // create patch request for /users
+    // create put request for /users
     // edit user id and user data
-    @Patch()
+    @Put()
     editUser(@GetUser('id') userId: number, @Body() data: EditUserData) {
         return this.userService.editUser(userId, data);
     }
