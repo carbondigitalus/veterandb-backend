@@ -1,19 +1,18 @@
-import {
-  createParamDecorator,
-  ExecutionContext,
-} from '@nestjs/common';
+// NPM Modules
+import { createParamDecorator, ExecutionContext } from '@nestjs/common';
 
+// create get user function
 export const GetUser = createParamDecorator(
-  (
-    data: string | undefined,
-    ctx: ExecutionContext,
-  ) => {
-    const request: Express.Request = ctx
-      .switchToHttp()
-      .getRequest();
-    if (data) {
-      return request.user[data];
+    (data: string | undefined, ctx: ExecutionContext) => {
+        // create request
+        // use http request
+        const request: Express.Request = ctx.switchToHttp().getRequest();
+        // if data is found
+        if (data) {
+            // return user with data variable
+            return request.user[data];
+        }
+        // otherwise, return the full user
+        return request.user;
     }
-    return request.user;
-  },
 );
