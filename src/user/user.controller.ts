@@ -6,3 +6,6 @@ import { EditUserDto } from './data';
 import { UserService } from './user.service';
 
 @UseGuards(JWTGuard)
+@Controller('users')
+export class UserController {
+}
