@@ -1,14 +1,21 @@
+// NPM Modules
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
+import { NestExpressApplication } from '@nestjs/platform-express';
+
+// Custom Modules
 import { AppModule } from './app.module';
 
 async function bootstrap() {
-    const app = await NestFactory.create(AppModule);
+    // create express based app
+    const app = await NestFactory.create<NestExpressApplication>(AppModule);
+    // use validation pipeline
     app.useGlobalPipes(
         new ValidationPipe({
             whitelist: true
         })
     );
+    // add url prefix with exceptions
     app.setGlobalPrefix('api/v1', {
         exclude: [
             '/',
@@ -25,6 +32,8 @@ async function bootstrap() {
             '/register'
         ]
     });
+    // listen on express app port
     await app.listen(3333);
 }
+// start app
 bootstrap();
