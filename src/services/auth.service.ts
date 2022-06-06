@@ -6,7 +6,6 @@ import * as argon from 'argon2';
 
 // Custom Modules
 import { AuthData } from '../data';
-import { PrismaService } from '../prisma/prisma.service';
 
 // create injectable auth service
 @Injectable()
@@ -14,7 +13,7 @@ export class AuthService {
     // create constructor
     // import prisma service, jwt service and cofig service
     constructor(
-        private prisma: PrismaService,
+        private userData: any,
         private jwt: JwtService,
         private config: ConfigService
     ) {}
@@ -26,7 +25,7 @@ export class AuthService {
         // save the new user in the db
         try {
             // create user
-            const user = await this.prisma.user.create({
+            const user = await this.userData.user.create({
                 data: {
                     email: data.email,
                     hash
@@ -45,7 +44,7 @@ export class AuthService {
     // create login method
     async login(data: AuthData) {
         // find the user by email
-        const user = await this.prisma.user.findUnique({
+        const user = await this.userData.user.findUnique({
             where: {
                 email: data.email
             }
