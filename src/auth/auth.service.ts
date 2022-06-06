@@ -10,6 +10,7 @@ import { ConfigService } from '@nestjs/config';
 export class AuthService {
     constructor(
         private prisma: PrismaService,
+        private jwt: JwtService,
     ) {}
 
 }
