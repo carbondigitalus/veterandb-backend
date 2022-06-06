@@ -3,3 +3,4 @@ import { PrismaService } from '../prisma/prisma.service';
 import { AuthData } from './data';
 import * as argon from 'argon2';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime';
+import { JwtService } from '@nestjs/jwt';
