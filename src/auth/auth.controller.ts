@@ -4,4 +4,6 @@ import { AuthData } from './data';
 
 @Controller('users')
 export class AuthController {
+    constructor(private authService: AuthService) {}
+
 }
