@@ -6,7 +6,7 @@ import { PrismaClientKnownRequestError } from '@prisma/client/runtime';
 import * as argon from 'argon2';
 
 // Custom Modules
-import { AuthData } from './data';
+import { AuthData } from '../data';
 import { PrismaService } from '../prisma/prisma.service';
 
 // create injectable auth service

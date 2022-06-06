@@ -3,9 +3,9 @@ import { Module } from '@nestjs/common';
 import { JwtModule } from '@nestjs/jwt';
 
 // Custom Modules
-import { AuthController } from './auth.controller';
-import { AuthService } from './auth.service';
-import { JWTStrategy } from './strategy';
+import { AuthController } from '../controllers';
+import { AuthService } from '../services';
+import { JWTStrategy } from '../strategies';
 
 // create module decorator
 // create class auth module

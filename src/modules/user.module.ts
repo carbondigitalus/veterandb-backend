@@ -2,8 +2,8 @@
 import { Module } from '@nestjs/common';
 
 // Custom Module
-import { UserController } from './user.controller';
-import { UserService } from './user.service';
+import { UserController } from '../controllers';
+import { UserService } from '../services';
 
 // create module with decorator
 // create user module class

@@ -3,10 +3,10 @@ import { Body, Controller, Get, Patch, UseGuards } from '@nestjs/common';
 import { User } from '@prisma/client';
 
 // Custom Modules
-import { GetUser } from '../auth/decorator';
-import { JWTGuard } from '../auth/guard';
-import { EditUserData } from './data';
-import { UserService } from './user.service';
+import { GetUser } from '../decorators';
+import { JWTGuard } from '../guards';
+import { EditUserData } from '../data';
+import { UserService } from '../services';
 
 // setup all subsequent controller methods to access jwt guard
 // create controller with /users endpoint

@@ -2,8 +2,8 @@
 import { Body, Controller, HttpCode, HttpStatus, Post } from '@nestjs/common';
 
 // Custom Modules
-import { AuthService } from './auth.service';
-import { AuthData } from './data';
+import { AuthService } from '../services';
+import { AuthData } from '../data';
 
 // create controller with decorator
 // create auth controller class with /users endpoint
