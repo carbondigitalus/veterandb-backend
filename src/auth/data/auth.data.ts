@@ -4,4 +4,8 @@ export class AuthData {
     @IsEmail()
     @IsNotEmpty()
     email: string;
+
+    @IsString()
+    @IsNotEmpty()
+    password: string;
 }
