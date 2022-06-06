@@ -5,3 +5,4 @@ import { JWTGuard } from '../auth/guard';
 import { EditUserDto } from './data';
 import { UserService } from './user.service';
 
+@UseGuards(JWTGuard)
