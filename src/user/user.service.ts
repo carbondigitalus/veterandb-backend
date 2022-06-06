@@ -1,12 +1,19 @@
+// NPM Modules
 import { Injectable } from '@nestjs/common';
-import { PrismaService } from '../prisma/prisma.service';
-import { EditUserDto } from './data';
 
+// Custom Modules
+import { EditUserData } from './data';
+import { PrismaService } from '../prisma/prisma.service';
+
+// create injectable user service
 @Injectable()
 export class UserService {
+    // import prisma variable with prisma service handled
     constructor(private prisma: PrismaService) {}
 
-    async editUser(userId: number, data: EditUserDto) {
+    // edit user method
+    async editUser(userId: number, data: EditUserData) {
+        // capture user
         const user = await this.prisma.user.update({
             where: {
                 id: userId
@@ -15,9 +22,8 @@ export class UserService {
                 ...data
             }
         });
-
+        // delete user hash before returning data
         delete user.hash;
-
         return user;
     }
 }
