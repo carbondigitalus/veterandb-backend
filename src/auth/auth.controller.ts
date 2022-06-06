@@ -6,4 +6,9 @@ import { AuthData } from './data';
 export class AuthController {
     constructor(private authService: AuthService) {}
 
+    @HttpCode(HttpStatus.OK)
+    @Post('login')
+    signin(@Body() data: AuthData) {
+        return this.authService.signin(data);
+    }
 }
