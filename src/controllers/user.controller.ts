@@ -1,6 +1,6 @@
 // NPM Modules
 import { Body, Controller, Get, Put, UseGuards } from '@nestjs/common';
-import { User } from '@prisma/client';
+import { User } from './../data';
 
 // Custom Modules
 import { GetUser } from '../decorators';
