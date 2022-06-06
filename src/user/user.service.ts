@@ -4,4 +4,6 @@ import { EditUserDto } from './data';
 
 @Injectable()
 export class UserService {
+    constructor(private prisma: PrismaService) {}
+
 }
