@@ -3,3 +3,5 @@ import { User } from '@prisma/client';
 import { GetUser } from '../auth/decorator';
 import { JWTGuard } from '../auth/guard';
 import { EditUserDto } from './data';
+import { UserService } from './user.service';
+
