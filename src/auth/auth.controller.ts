@@ -11,4 +11,8 @@ export class AuthController {
     signin(@Body() data: AuthData) {
         return this.authService.signin(data);
     }
+    @Post('register')
+    signup(@Body() data: AuthData) {
+        return this.authService.signup(data);
+    }
 }
