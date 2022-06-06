@@ -12,17 +12,17 @@ async function bootstrap() {
     app.setGlobalPrefix('api/v1', {
         exclude: [
             '/',
-            'about',
-            'ads',
-            'contact',
-            'legal/terms-conditions',
-            'legal/privacy-policy',
-            'legal/shipping-policy',
-            'legal/return-policy',
-            'login',
-            'logout',
-            'press',
-            'register'
+            '/about',
+            '/ads',
+            '/contact',
+            '/legal/terms-conditions',
+            '/legal/privacy-policy',
+            '/legal/shipping-policy',
+            '/legal/return-policy',
+            '/login',
+            '/logout',
+            '/press',
+            '/register'
         ]
     });
     await app.listen(3333);
