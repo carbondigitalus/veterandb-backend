@@ -2,6 +2,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
+// Custom Modules
+import { User } from './data';
+
 // create module from decorator
 @Module({
     imports: [
@@ -12,7 +15,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
             username: process.env.DB_USERNAME,
             password: process.env.DB_PASSWORD,
             database: process.env.DB_TABLE,
-            entities: [],
+            entities: [User],
             synchronize: true
         })
     ],
