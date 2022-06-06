@@ -8,4 +8,5 @@ import { UserService } from './user.service';
 @UseGuards(JWTGuard)
 @Controller('users')
 export class UserController {
+    constructor(private userService: UserService) {}
 }
