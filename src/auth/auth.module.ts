@@ -9,3 +9,4 @@ import { JWTStrategy } from './strategy';
     controllers: [AuthController],
     providers: [AuthService, JWTStrategy]
 })
+export class AuthModule {}
