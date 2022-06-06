@@ -9,4 +9,7 @@ export class EditUserData {
     @IsOptional()
     firstName?: string;
 
+    @IsString()
+    @IsOptional()
+    lastName?: string;
 }
