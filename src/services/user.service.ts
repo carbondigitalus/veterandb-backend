@@ -8,12 +8,12 @@ import { EditUserData } from '../data';
 @Injectable()
 export class UserService {
     // import prisma variable with prisma service handled
-    constructor(private userService: any) {}
+    constructor(private userData: any) {}
 
     // edit user method
     async editUser(userId: number, data: EditUserData) {
         // capture user
-        const user = await this.userService.user.update({
+        const user = await this.userData.user.update({
             where: {
                 id: userId
             },
