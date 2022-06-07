@@ -10,9 +10,9 @@ export const GetUser = createParamDecorator(
         // if data is found
         if (data) {
             // return user with data variable
-            return request.user[data];
+            return request[data];
         }
         // otherwise, return the full user
-        return request.user;
+        return request;
     }
 );
