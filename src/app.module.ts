@@ -1,5 +1,6 @@
 // NPM Modules
 import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 // Custom Modules
@@ -8,6 +9,9 @@ import { User } from './data';
 // create module from decorator
 @Module({
     imports: [
+        ConfigModule.forRoot({
+            envFilePath: 'config.env'
+        }),
         TypeOrmModule.forRoot({
             type: 'mysql',
             host: process.env.DB_HOST,
