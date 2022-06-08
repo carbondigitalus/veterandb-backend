@@ -24,7 +24,6 @@ export class UserController {
     constructor() {}
 
 
-    // create get request for /users/me
     // get user formatted as user
     @Get('me')
     getMe(@GetUser() user: User) {
