@@ -4,7 +4,7 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 // Custom Modules
-import { User } from './data';
+import { User } from './database';
 
 // create module from decorator
 @Module({
