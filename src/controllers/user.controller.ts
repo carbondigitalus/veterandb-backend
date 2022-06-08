@@ -59,6 +59,10 @@ export class UserController {
     @Post()
     userCreateOne() {}
 
+    // route: /users/:id
+    @Delete(':id')
+    userDeleteOne() {}
+
     // route: /users
     @Get()
     usersGetAll() {}
