@@ -4,7 +4,7 @@ import { JwtService } from '@nestjs/jwt';
 import * as argon from 'argon2';
 
 // Custom Modules
-import { AuthData } from '../data';
+import { AuthData } from './../models';
 
 // create injectable auth service
 @Injectable()
