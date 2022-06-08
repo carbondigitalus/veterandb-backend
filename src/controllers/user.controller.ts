@@ -55,6 +55,10 @@ export class UserController {
     @Patch('account-update-settings')
     accountUpdateSettings() {}
 
+    // route: /users
+    @Post()
+    userCreateOne() {}
+
     // get user formatted as user
         return user;
     }
