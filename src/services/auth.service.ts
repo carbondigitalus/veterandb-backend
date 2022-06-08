@@ -4,7 +4,7 @@ import { JwtService } from '@nestjs/jwt';
 import * as argon from 'argon2';
 
 // Custom Modules
-import { AuthData } from './../models';
+import { AuthDataModel } from './../utils';
 
 // create injectable auth service
 @Injectable()
@@ -14,7 +14,7 @@ export class AuthService {
     constructor(private userData: any, private jwt: JwtService) {}
 
     // create register method
-    async register(data: AuthData) {
+    async register(data: AuthDataModel) {
         // generate the password hash
         const hash = await argon.hash(data.password);
         // save the new user in the db
@@ -37,7 +37,7 @@ export class AuthService {
     }
 
     // create login method
-    async login(data: AuthData) {
+    async login(data: AuthDataModel) {
         // find the user by email
         const user = await this.userData.user.findUnique({
             where: {
