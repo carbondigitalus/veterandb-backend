@@ -3,7 +3,7 @@ import { Body, Controller, HttpCode, HttpStatus, Post } from '@nestjs/common';
 
 // Custom Modules
 import { AuthService } from '../services';
-import { AuthData } from './../models';
+import { AuthDataModel } from './../utils';
 
 // create controller with decorator
 // create auth controller class with /users endpoint
@@ -18,7 +18,7 @@ export class AuthController {
     // capture req.body in data variable
     @HttpCode(HttpStatus.OK)
     @Post('login')
-    login(@Body() data: AuthData) {
+    login(@Body() data: AuthDataModel) {
         // use login function with captured data
         return this.authService.login(data);
     }
@@ -27,7 +27,7 @@ export class AuthController {
     // create register function
     // capture req.body in data variable
     @Post('register')
-    register(@Body() data: AuthData) {
+    register(@Body() data: AuthDataModel) {
         // use register function with captured data
         return this.authService.register(data);
     }
