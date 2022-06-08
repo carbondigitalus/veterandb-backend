@@ -13,6 +13,25 @@ export class AccountService {
     // import prisma service, jwt service and cofig service
     constructor(private userData: any, private jwt: JwtService) {}
 
+    // create login method
+    async login(data: AccountDataModel) {
+        // find the user by email
+        const user = await this.userData.user.findUnique({
+            where: {
+                email: data.email
+            }
+        });
+        // if user does not exist throw exception
+        if (!user) throw new ForbiddenException('Credentials incorrect');
+
+        // compare password
+        const pwMatches = await argon.verify(user.hash, data.password);
+        // if password incorrect throw exception
+        if (!pwMatches) throw new ForbiddenException('Credentials incorrect');
+        // return signed token if login successful
+        return this.signToken(user.id, user.email);
+    }
+
     // create register method
     async register(data: AccountDataModel) {
         // generate the password hash
@@ -34,25 +53,6 @@ export class AccountService {
             }
             throw error;
         }
-    }
-
-    // create login method
-    async login(data: AccountDataModel) {
-        // find the user by email
-        const user = await this.userData.user.findUnique({
-            where: {
-                email: data.email
-            }
-        });
-        // if user does not exist throw exception
-        if (!user) throw new ForbiddenException('Credentials incorrect');
-
-        // compare password
-        const pwMatches = await argon.verify(user.hash, data.password);
-        // if password incorrect throw exception
-        if (!pwMatches) throw new ForbiddenException('Credentials incorrect');
-        // return signed token if login successful
-        return this.signToken(user.id, user.email);
     }
 
     // create sign token method
