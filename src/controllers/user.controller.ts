@@ -39,6 +39,10 @@ export class UserController {
     @Post('account-password-forgot')
     accountPasswordForgot() {}
 
+    // route: /users/account-password-reset/:id
+    @Patch('account-password-reset/:token')
+    accountPasswordReset() {}
+
     // get user formatted as user
         return user;
     }
