@@ -59,6 +59,10 @@ export class UserController {
     @Post()
     userCreateOne() {}
 
+    // route: /users
+    @Get()
+    usersGetAll() {}
+
     // get user formatted as user
         return user;
     }
