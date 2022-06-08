@@ -18,6 +18,9 @@ export class UserController {
     // access user service data
     constructor(private userService: UserService) {}
 
+    @Get(':id')
+    getOneUser() {}
+
     // create get request for /users/me
     // get user formatted as user
     @Get('me')
