@@ -1,34 +1,56 @@
 // NPM Modules
-import { Body, Controller, HttpCode, HttpStatus, Post } from '@nestjs/common';
+import {
+    Controller,
+    Delete,
+    Get,
+    Patch,
+    Post,
+    UseGuards
+} from '@nestjs/common';
+import { User } from './../database';
 
 // Custom Modules
-import { AccountService } from '../services';
-import { AccountDataModel } from '../utils';
+import { GetUser, JWTGuard } from './../utils';
 
-// create controller with decorator
-// create auth controller class with /users endpoint
-@Controller('users')
+// setup all subsequent controller methods to access jwt guard
+// create controller with /account endpoint
+// create user controller class
+@UseGuards(JWTGuard)
+@Controller('account')
 export class AccountController {
     // create constructor
-    // import auth service data
-    constructor(private accountService: AccountService) {}
+    // access user service data
+    constructor() {}
 
-    // create post request with /users/login endpoint
-    // create login function
-    // capture req.body in data variable
-    @HttpCode(HttpStatus.OK)
+    // route: /account/deactivate
+    @Delete('deactivate')
+    accountDeactivate() {}
+
+    // route: /account/login
     @Post('login')
-    login(@Body() data: AccountDataModel) {
-        // use login function with captured data
-        return this.accountService.login(data);
-    }
+    accountLogin() {}
 
-    // create post request with /users/register endpoint
-    // create register function
-    // capture req.body in data variable
+    // route: /account/logout
+    @Get('logout')
+    accountLogout() {}
+
+    // route: /account/password-forgot
+    @Post('password-forgot')
+    accountPasswordForgot() {}
+
+    // route: /account/password-reset/:id
+    @Patch('password-reset/:token')
+    accountPasswordReset() {}
+
+    // route: /account/register
     @Post('register')
-    register(@Body() data: AccountDataModel) {
-        // use register function with captured data
-        return this.accountService.register(data);
-    }
+    accountRegister() {}
+
+    // route: /account/update-profile
+    @Patch('update-profile')
+    accountUpdateProfile() {}
+
+    // route: /account/update-settings
+    @Patch('update-settings')
+    accountUpdateSettings() {}
 }
