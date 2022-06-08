@@ -47,6 +47,10 @@ export class UserController {
     @Post('account-register')
     accountRegister() {}
 
+    // route: /users/account-update-profile
+    @Patch('account-update-profile')
+    accountUpdateProfile() {}
+
     // get user formatted as user
         return user;
     }
