@@ -24,8 +24,7 @@ import {
 import 'reflect-metadata';
 
 // Custom Modules
-import { Match } from './../decorators';
-import { AccountStatus, UserRole } from './../enums';
+import { AccountStatus, Match, UserRole } from './../utils';
 
 // Middlware Variables
 let candidatePassword: string;
