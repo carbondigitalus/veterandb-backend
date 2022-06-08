@@ -1,6 +1,5 @@
 // NPM Modules
 import { ForbiddenException, Injectable } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import * as argon from 'argon2';
 
@@ -12,11 +11,7 @@ import { AuthData } from '../data';
 export class AuthService {
     // create constructor
     // import prisma service, jwt service and cofig service
-    constructor(
-        private userData: any,
-        private jwt: JwtService,
-        private config: ConfigService
-    ) {}
+    constructor(private userData: any, private jwt: JwtService) {}
 
     // create register method
     async register(data: AuthData) {
@@ -71,7 +66,7 @@ export class AuthService {
             email
         };
         // get jwt secret from env variable
-        const secret = this.config.get('JWT_SECRET');
+        const secret = process.env.JWT_SECRET;
         // create jwt token
         const token = await this.jwt.signAsync(payload, {
             expiresIn: '15m',
