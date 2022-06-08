@@ -10,7 +10,6 @@ import {
 import { User } from './../database';
 
 // Custom Modules
-import { UserService } from '../services';
 import { GetUser } from './../decorators';
 import { JWTGuard } from './../utils';
 
