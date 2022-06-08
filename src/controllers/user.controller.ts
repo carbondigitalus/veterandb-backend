@@ -10,10 +10,10 @@ import {
 import { User } from './../database';
 
 // Custom Modules
-import { GetUser } from '../decorators';
 import { JWTGuard } from '../guards';
 import { EditUserData } from '../data';
 import { UserService } from '../services';
+import { GetUser } from './../decorators';
 
 // setup all subsequent controller methods to access jwt guard
 // create controller with /users endpoint
