@@ -23,8 +23,6 @@ export class UserController {
     // access user service data
     constructor() {}
 
-    @Get(':id')
-    getOneUser() {}
 
     // create get request for /users/me
     // get user formatted as user
