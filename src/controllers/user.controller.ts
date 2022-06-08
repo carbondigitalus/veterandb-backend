@@ -31,6 +31,10 @@ export class UserController {
     @Post('account-login')
     accountLogin() {}
 
+    // route: /users/account-logout
+    @Get('account-logout')
+    accountLogout() {}
+
     // get user formatted as user
         return user;
     }
