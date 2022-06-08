@@ -13,8 +13,7 @@ import { User } from './../database';
 import { GetUser, JWTGuard } from './../utils';
 
 // setup all subsequent controller methods to access jwt guard
-// create controller with /account endpoint
-// create user controller class
+// route: /account
 @UseGuards(JWTGuard)
 @Controller('account')
 export class AccountController {
