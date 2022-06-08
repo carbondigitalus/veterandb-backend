@@ -25,8 +25,6 @@ export class UserController {
 
 
     // get user formatted as user
-    @Get('me')
-    getMe(@GetUser() user: User) {
         return user;
     }
 
