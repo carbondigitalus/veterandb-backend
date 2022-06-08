@@ -67,7 +67,10 @@ export class UserController {
     @Get()
     usersGetAll() {}
 
+    // create get request for /users/:id
     // get user formatted as user
+    @Get(':id')
+    usersGetOne(@GetUser() user: User) {
         return user;
     }
 }
