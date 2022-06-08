@@ -27,11 +27,4 @@ export class UserController {
     // get user formatted as user
         return user;
     }
-
-    // create put request for /users
-    // edit user id and user data
-    @Put()
-    editUser(@GetUser('id') userId: number, @Body() data: EditUserData) {
-        return this.userService.editUser(userId, data);
-    }
 }
