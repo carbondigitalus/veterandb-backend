@@ -1,5 +1,4 @@
 // NPM Modules
-import { User } from './../data';
 import {
     Controller,
     Delete,
@@ -8,6 +7,7 @@ import {
     Post,
     UseGuards
 } from '@nestjs/common';
+import { User } from './../database';
 
 // Custom Modules
 import { GetUser } from '../decorators';
