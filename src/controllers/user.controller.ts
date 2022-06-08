@@ -1,12 +1,5 @@
 // NPM Modules
-import {
-    Controller,
-    Delete,
-    Get,
-    Patch,
-    Post,
-    UseGuards
-} from '@nestjs/common';
+import { Controller, Delete, Get, Post, UseGuards } from '@nestjs/common';
 import { User } from './../database';
 
 // Custom Modules
