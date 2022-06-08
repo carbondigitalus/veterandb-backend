@@ -43,6 +43,10 @@ export class UserController {
     @Patch('account-password-reset/:token')
     accountPasswordReset() {}
 
+    // route: /users/account-register
+    @Post('account-register')
+    accountRegister() {}
+
     // get user formatted as user
         return user;
     }
