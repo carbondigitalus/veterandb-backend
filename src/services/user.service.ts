@@ -2,7 +2,7 @@
 import { Injectable } from '@nestjs/common';
 
 // Custom Modules
-import { EditUserData } from './../models';
+import { EditUserData } from './../utils';
 
 // create injectable user service
 @Injectable()
