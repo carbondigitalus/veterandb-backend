@@ -21,7 +21,7 @@ import { JWTGuard } from './../utils';
 export class UserController {
     // create constructor
     // access user service data
-    constructor(private userService: UserService) {}
+    constructor() {}
 
     @Get(':id')
     getOneUser() {}
