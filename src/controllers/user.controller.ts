@@ -23,6 +23,9 @@ export class UserController {
     // access user service data
     constructor() {}
 
+    // route: /users/account-deactivate
+    @Delete('account-deactivate')
+    accountDeactivate() {}
 
     // get user formatted as user
         return user;
