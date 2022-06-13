@@ -23,7 +23,7 @@ import { AccountDataModel, GetUser, JWTGuard } from './../utils';
 export class AccountController {
     // create constructor
     // access user service data
-    constructor() {}
+    constructor(private accountService: AccountService) {}
 
     // route: /account/deactivate
     @Delete('deactivate')
