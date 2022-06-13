@@ -7,7 +7,7 @@ import { ExtractJwt, Strategy } from 'passport-jwt';
 
 // create injectable jwt strategy class
 @Injectable()
-export class JWTStrategy extends PassportStrategy(Strategy, 'jwt') {
+export class JWTStrategy extends PassportStrategy(Strategy, 'jwt-strategy') {
     // create constructor
     // import config service and prisma service data
     constructor(private userData: any) {
