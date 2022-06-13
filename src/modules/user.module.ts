@@ -10,6 +10,7 @@ import { UserService } from './../services';
 // create module with decorator
 // create user module class
 @Module({
+    imports: [TypeOrmModule.forFeature([User])],
     exports: [TypeOrmModule],
     controllers: [UserController],
     providers: [UserService]
