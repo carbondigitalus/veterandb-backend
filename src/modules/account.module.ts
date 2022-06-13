@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 // Custom Modules
 import { AccountController } from '../controllers';
+import { User } from 'src/database';
 import { AccountService } from '../services';
 import { JWTStrategy } from '../utils';
 
