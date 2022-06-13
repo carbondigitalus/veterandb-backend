@@ -1,6 +1,7 @@
 // NPM Modules
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 // Custom Modules
 import { EditUserData } from './../utils';
 
