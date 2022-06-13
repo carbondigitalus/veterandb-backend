@@ -1,5 +1,6 @@
 // NPM Module
 import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 // Custom Module
 import { UserController } from './../controllers';
