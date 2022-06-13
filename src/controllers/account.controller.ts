@@ -13,7 +13,7 @@ import {
 import { User } from './../database';
 
 // Custom Modules
-import { GetUser, JWTGuard } from './../utils';
+import { AccountDataModel, GetUser, JWTGuard } from './../utils';
 
 // setup all subsequent controller methods to access jwt guard
 // route: /account
