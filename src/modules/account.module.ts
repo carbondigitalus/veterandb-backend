@@ -11,6 +11,7 @@ import { JWTStrategy } from '../utils';
 // create class auth module
 @Module({
     imports: [JwtModule.register({})],
+    exports: [TypeOrmModule],
     controllers: [AccountController],
     providers: [AccountService, JWTStrategy]
 })
