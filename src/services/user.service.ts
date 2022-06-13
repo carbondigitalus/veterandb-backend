@@ -1,6 +1,5 @@
 // NPM Modules
 import { Injectable } from '@nestjs/common';
-
 // Custom Modules
 import { EditUserData } from './../utils';
 
