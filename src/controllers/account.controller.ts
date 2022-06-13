@@ -32,7 +32,9 @@ export class AccountController {
     // route: /account/login
     @HttpCode(HttpStatus.OK)
     @Post('login')
-    accountLogin() {}
+    accountLogin(@Body() data: AccountDataModel) {
+        return this.accountService.login(data);
+    }
 
     // route: /account/logout
     @Get('logout')
