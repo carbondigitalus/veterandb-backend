@@ -9,7 +9,10 @@ import { User } from 'src/database';
 @Injectable()
 export class UserService {
     // import prisma variable with prisma service handled
-    constructor(private userData: any) {}
+    constructor(
+        @InjectRepository(User)
+        private readonly userRepository: Repository<User>
+    ) {}
 
     // edit user method
     async editUser(userId: number, data: EditUserData) {
