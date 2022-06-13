@@ -30,6 +30,7 @@ export class AccountController {
     accountDeactivate() {}
 
     // route: /account/login
+    @HttpCode(HttpStatus.OK)
     @Post('login')
     accountLogin() {}
 
