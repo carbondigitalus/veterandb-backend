@@ -1,6 +1,7 @@
 // NPM Modules
 import { ForbiddenException, Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
+import { InjectRepository } from '@nestjs/typeorm';
 import * as argon from 'argon2';
 
 // Custom Modules
