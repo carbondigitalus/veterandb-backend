@@ -15,18 +15,20 @@ export class UserService {
     ) {}
 
     // edit user method
-    async editUser(userId: number, data: EditUserData) {
-        // capture user
-        const user = await this.userData.user.update({
-            where: {
-                id: userId
-            },
-            data: {
-                ...data
-            }
-        });
-        // delete user hash before returning data
-        delete user.hash;
-        return user;
-    }
+    // async editUser(userId: string, userRepository: User): Promise<User> {
+    //     // capture user
+    //     const user = await this.userRepository;
+
+    //     const update({
+    //         where: {
+    //             id: userId
+    //         },
+    //         data: {
+    //             ...data
+    //         }
+    //     });
+    //     // delete user hash before returning data
+    //     delete user.hash;
+    //     return user;
+    // }
 }
