@@ -7,6 +7,7 @@ import { Repository } from 'typeorm';
 
 // Custom Modules
 import { AccountDataModel } from '../utils';
+import { User } from 'src/database';
 
 // create injectable auth service
 @Injectable()
