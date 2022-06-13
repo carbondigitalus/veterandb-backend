@@ -3,7 +3,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 // Custom Modules
-import { EditUserData } from './../utils';
+import { User } from 'src/database';
 
 // create injectable user service
 @Injectable()
