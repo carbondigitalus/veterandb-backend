@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 // Custom Module
 import { UserController } from './../controllers';
+import { User } from 'src/database';
 import { UserService } from './../services';
 
 // create module with decorator
