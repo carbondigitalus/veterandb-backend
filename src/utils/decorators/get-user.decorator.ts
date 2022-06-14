@@ -2,7 +2,7 @@
 import { createParamDecorator, ExecutionContext } from '@nestjs/common';
 
 // create get user function
-export const GetUser = createParamDecorator(
+export const GetUserData = createParamDecorator(
     (data: string | undefined, ctx: ExecutionContext) => {
         // create request
         // use http request
