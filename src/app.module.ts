@@ -5,7 +5,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 // Custom Modules
 import { User } from './database';
-import { AccountModule, UserModule } from './modules';
+import { AccountModule } from './account/account.module';
+import { UserModule } from './user/user.module';
 
 // create module from decorator
 @Module({
