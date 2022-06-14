@@ -3,9 +3,9 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 // Custom Module
-import { UserController } from './../controllers';
 import { User } from 'src/database';
-import { UserService } from './../services';
+import { UserController } from './user.controller';
+import { UserService } from './user.service';
 
 // create module with decorator
 // create user module class
