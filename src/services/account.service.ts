@@ -44,27 +44,27 @@ export class AccountService {
     }
 
     // create register method
-    async register(data: AccountDataModel) {
-        // generate the password hash
-        const hash = await argon.hash(data.password);
-        // save the new user in the db
-        try {
-            // create user
-            const user = await this.userData.user.create({
-                data: {
-                    email: data.email,
-                    hash
-                }
-            });
-            // return signed token after user creation
-            return this.signToken(user.id, user.email);
-        } catch (error) {
-            if (error instanceof ForbiddenException) {
-                throw new ForbiddenException('Credentials taken');
-            }
-            throw error;
-        }
-    }
+    // async register(data: AccountDataModel) {
+    //     // generate the password hash
+    //     const hash = await argon.hash(data.password);
+    //     // save the new user in the db
+    //     try {
+    //         // create user
+    //         const user = await this.userRepository.create({
+    //             data: {
+    //                 email: data.email,
+    //                 hash
+    //             }
+    //         });
+    //         // return signed token after user creation
+    //         return this.signToken(user.id, user.email);
+    //     } catch (error) {
+    //         if (error instanceof ForbiddenException) {
+    //             throw new ForbiddenException('Credentials taken');
+    //         }
+    //         throw error;
+    //     }
+    // }
 
     // create sign token method
     async signToken(
