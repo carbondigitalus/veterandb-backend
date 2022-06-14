@@ -6,6 +6,7 @@ import { ExtractJwt, Strategy } from 'passport-jwt';
 import { Repository } from 'typeorm';
 
 // Custom Modules
+import { User } from 'src/database';
 
 // create injectable jwt strategy class
 @Injectable()
