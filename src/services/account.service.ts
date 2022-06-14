@@ -32,7 +32,10 @@ export class AccountService {
         if (!user) throw new ForbiddenException('Unable to find user.');
 
         // compare password
-        const pwMatches = await argon.verify(user.hash, data.password);
+        const passwordValidateSuccess = await argon.verify(
+            user.password,
+            data.password
+        );
         // if password incorrect throw exception
         if (!pwMatches) throw new ForbiddenException('Credentials incorrect');
         // return signed token if login successful
