@@ -6,8 +6,8 @@ import * as argon from 'argon2';
 import { Repository } from 'typeorm';
 
 // Custom Modules
-import { AccountDataModel } from '../utils';
 import { User } from 'src/database';
+import { AccountDTO } from './dto/account.dto';
 
 // create injectable auth service
 @Injectable()
@@ -21,7 +21,7 @@ export class AccountService {
     ) {}
 
     // create login method
-    async login(data: AccountDataModel) {
+    async login(data: AccountDTO) {
         // find the user by email
         const user = await this.userRepository.findOne({
             where: {
