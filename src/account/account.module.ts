@@ -4,9 +4,9 @@ import { JwtModule } from '@nestjs/jwt';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 // Custom Modules
-import { AccountController } from '../controllers';
 import { User } from 'src/database';
-import { AccountService } from '../services';
+import { AccountController } from './account.controller';
+import { AccountService } from './account.service';
 import { JWTStrategy } from '../utils';
 
 // create module decorator
