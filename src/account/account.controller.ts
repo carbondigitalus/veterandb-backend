@@ -10,7 +10,6 @@ import {
     Post,
     UseGuards
 } from '@nestjs/common';
-import { User } from './../database';
 
 // Custom Modules
 import { AccountService } from 'src/services';
