@@ -7,7 +7,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from 'src/database';
 import { AccountController } from './account.controller';
 import { AccountService } from './account.service';
-import { JWTStrategy } from '../utils';
+import { JWTStrategy } from '../utils/strategy';
 
 // create module decorator
 // create class auth module
