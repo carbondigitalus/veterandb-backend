@@ -14,7 +14,11 @@ import { User } from 'src/database';
 export class AccountService {
     // create constructor
     // import prisma service, jwt service and cofig service
-    constructor(private userData: any, private jwt: JwtService) {}
+    constructor(
+        @InjectRepository(User)
+        private userRepository: Repository<User>,
+        private jwt: JwtService
+    ) {}
 
     // create login method
     async login(data: AccountDataModel) {
