@@ -24,7 +24,7 @@ import {
 import 'reflect-metadata';
 
 // Custom Modules
-import { AccountStatus, Match, UserRole } from './../utils';
+import { AccountStatus, ValidateMatch, UserRole } from './../utils';
 
 // Middlware Variables
 let candidatePassword: string;
@@ -65,7 +65,7 @@ export default class User {
 
     @Column({ type: 'varchar' })
     @IsString()
-    @Match('password', { message: 'Passwords do not match.' })
+    @ValidateMatch('password', { message: 'Passwords do not match.' })
     passwordConfirm: string;
 
     @Column({
