@@ -37,7 +37,8 @@ export class AccountService {
             data.password
         );
         // if password incorrect throw exception
-        if (!pwMatches) throw new ForbiddenException('Credentials incorrect');
+        if (!passwordValidateSuccess)
+            throw new ForbiddenException('Email or password incorrect.');
         // return signed token if login successful
         return this.signToken(user.id, user.email);
     }
