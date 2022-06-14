@@ -1,7 +1,9 @@
 // NPM Modules
 import { Injectable } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
+import { InjectRepository } from '@nestjs/typeorm';
 import { ExtractJwt, Strategy } from 'passport-jwt';
+import { Repository } from 'typeorm';
 
 // Custom Modules
 
@@ -10,7 +12,10 @@ import { ExtractJwt, Strategy } from 'passport-jwt';
 export class JWTStrategy extends PassportStrategy(Strategy, 'jwt-strategy') {
     // create constructor
     // import config service and prisma service data
-    constructor(private userData: any) {
+    constructor(
+        @InjectRepository(User)
+        private userRepository: Repository<User>
+    ) {
         super({
             jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
             secretOrKey: process.env.JWT_SECRET
