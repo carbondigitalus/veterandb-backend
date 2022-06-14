@@ -30,7 +30,7 @@ export class UserController {
     // create get request for /users/:id
     // get user formatted as user
     @Get(':id')
-    usersGetOne(@GetUser() user: User) {
+    usersGetOne(@GetUserData() user: User) {
         return user;
     }
 }
