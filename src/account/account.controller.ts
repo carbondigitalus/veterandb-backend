@@ -12,8 +12,9 @@ import {
 } from '@nestjs/common';
 
 // Custom Modules
-import { AccountService } from 'src/services';
-import { AccountDataModel, GetUser, JWTGuard } from './../utils';
+import { AccountService } from './account.service';
+import { AccountDTO } from './dto/account.dto';
+import { JWTGuard } from './../utils';
 
 // setup all subsequent controller methods to access jwt guard
 // route: /account
@@ -31,7 +32,7 @@ export class AccountController {
     // route: /account/login
     @HttpCode(HttpStatus.OK)
     @Post('login')
-    accountLogin(@Body() data: AccountDataModel) {
+    accountLogin(@Body() data: AccountDTO) {
         return this.accountService.login(data);
     }
 
