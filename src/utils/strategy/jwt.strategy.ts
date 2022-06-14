@@ -33,8 +33,6 @@ export class JWTStrategy extends PassportStrategy(Strategy, 'jwt-strategy') {
             }
         });
         // delete user hash
-        // return user
-        delete user.hash;
         return user;
     }
 }
