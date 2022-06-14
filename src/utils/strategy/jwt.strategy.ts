@@ -27,7 +27,7 @@ export class JWTStrategy extends PassportStrategy(Strategy, 'jwt-strategy') {
     // use jwt payload, user data and email
     async validate(payload: { sub: number; email: string }) {
         // find user
-        const user = await this.userData.user.findUnique({
+        const user = await this.userRepository.findOne({
             where: {
                 id: payload.sub
             }
