@@ -3,7 +3,8 @@ import { Controller, Delete, Get, Post, UseGuards } from '@nestjs/common';
 import { User } from './../database';
 
 // Custom Modules
-import { GetUserData, JWTGuard } from './../utils';
+import { JWTGuard } from './../utils/guards';
+import { GetUserData } from './../utils/decorators';
 
 // setup all subsequent controller methods to access jwt guard
 // create controller with /users endpoint
