@@ -29,7 +29,7 @@ export class AccountService {
             }
         });
         // if user does not exist throw exception
-        if (!user) throw new ForbiddenException('Credentials incorrect');
+        if (!user) throw new ForbiddenException('Unable to find user.');
 
         // compare password
         const pwMatches = await argon.verify(user.hash, data.password);
