@@ -2,7 +2,7 @@
 import { IsEmail, IsNotEmpty, IsString } from 'class-validator';
 
 // create auth data class for api validations
-export class AccountDataModel {
+export class AccountDTO {
     @IsEmail()
     @IsNotEmpty()
     email: string;
