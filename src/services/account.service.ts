@@ -80,7 +80,7 @@ export class AccountService {
         const secret = process.env.JWT_SECRET;
         // create jwt token
         const token = await this.jwt.signAsync(payload, {
-            expiresIn: '15m',
+            expiresIn: process.env.JWT_EXPIRES_IN,
             secret: secret
         });
         // return access token
