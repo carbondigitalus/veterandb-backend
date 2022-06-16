@@ -11,7 +11,8 @@ import {
     IsString,
     Matches,
     MinLength,
-    MaxLength
+    MaxLength,
+    IsArray
 } from 'class-validator';
 import { NextFunction } from 'express';
 import {
