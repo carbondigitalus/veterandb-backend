@@ -7,7 +7,7 @@ import { Repository } from 'typeorm';
 
 // Custom Modules
 import { User } from 'src/database';
-import { AccountDTO } from './dto/account.dto';
+import { AccountLoginDTO } from './dto/login.dto';
 
 // create injectable auth service
 @Injectable()
