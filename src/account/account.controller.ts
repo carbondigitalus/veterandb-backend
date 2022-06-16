@@ -53,6 +53,7 @@ export class AccountController {
     accountRegister() {}
 
     // route: /account/update-profile
+    @UseGuards(JWTGuard)
     @Patch('update-profile')
     accountUpdateProfile() {}
 
