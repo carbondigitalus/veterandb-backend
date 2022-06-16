@@ -96,6 +96,14 @@ export default class User {
     })
     accountType: AccountType;
 
+    @IsArray()
+    @Column({
+        type: 'enum',
+        enum: AccountVerified,
+        default: AccountVerified.None
+    })
+    accountVerified: AccountVerified[];
+
     @Column({
         type: 'boolean',
         default: true
