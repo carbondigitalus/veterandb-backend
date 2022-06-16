@@ -32,8 +32,9 @@ async function bootstrap() {
             '/register'
         ]
     });
+
     // listen on express app port
-    await app.listen(3333);
+    await app.listen(8000);
 }
 // start app
 bootstrap();
