@@ -45,6 +45,26 @@ export class AccountService {
     }
 
     // create register method
+    async register(data: AccountRegisterDTO) {
+        // save the new user in the db
+        try {
+            // generate the password hash
+            const hashedPassword = await argon.hash(data.password);
+            // create user
+            const user = await this.userRepository.create({
+                email: data.email,
+                password: hashedPassword
+            });
+
+            // return signed token after user creation
+            return this.signToken(user.id, user.email);
+        } catch (error) {
+            if (error instanceof ForbiddenException) {
+                throw new ForbiddenException('Credentials taken');
+            }
+            throw error;
+        }
+    }
 
     // create sign token method
     async signToken(
