@@ -25,6 +25,7 @@ export class AccountController {
     constructor(private accountService: AccountService) {}
 
     // route: /account/deactivate
+    @UseGuards(JWTGuard)
     @Delete('deactivate')
     accountDeactivate() {}
 
