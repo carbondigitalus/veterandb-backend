@@ -90,6 +90,13 @@ export default class User {
     accountStatus: AccountStatus;
 
     @Column({
+        type: 'enum',
+        enum: AccountType,
+        default: AccountType.Veteran
+    })
+    accountType: AccountType;
+
+    @Column({
         type: 'boolean',
         default: true
     })
