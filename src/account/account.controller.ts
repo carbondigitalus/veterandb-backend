@@ -18,7 +18,6 @@ import { JWTGuard } from './../utils/guards';
 
 // setup all subsequent controller methods to access jwt guard
 // route: /account
-@UseGuards(JWTGuard)
 @Controller('account')
 export class AccountController {
     // create constructor
