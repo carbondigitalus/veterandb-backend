@@ -13,7 +13,7 @@ import {
 
 // Custom Modules
 import { AccountService } from './account.service';
-import { AccountDTO } from './dto/account.dto';
+import { AccountLoginDTO } from './dto/login.dto';
 import { JWTGuard } from './../utils/guards';
 
 // setup all subsequent controller methods to access jwt guard
