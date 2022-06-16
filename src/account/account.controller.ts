@@ -37,6 +37,7 @@ export class AccountController {
     }
 
     // route: /account/logout
+    @UseGuards(JWTGuard)
     @Get('logout')
     accountLogout() {}
 
