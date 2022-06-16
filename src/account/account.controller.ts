@@ -31,7 +31,7 @@ export class AccountController {
     // route: /account/login
     @HttpCode(HttpStatus.OK)
     @Post('login')
-    accountLogin(@Body() data: AccountDTO) {
+    accountLogin(@Body() data: AccountLoginDTO) {
         return this.accountService.login(data);
     }
 
