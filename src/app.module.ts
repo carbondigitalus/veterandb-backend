@@ -12,6 +12,7 @@ import { FAQModule } from './faq/faq.module';
 import { NonProfitModule } from './nonprofit/nonprofit.module';
 import { PodcastModule } from './podcast/podcast.module';
 import { UserModule } from './user/user.module';
+import { ReviewModule } from './review/review.module';
 
 // create module from decorator
 @Module({
@@ -35,6 +36,7 @@ import { UserModule } from './user/user.module';
         FAQModule,
         NonProfitModule,
         PodcastModule,
+        ReviewModule,
         UserModule
     ],
     controllers: [],

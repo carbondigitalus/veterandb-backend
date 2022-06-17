@@ -741,6 +741,110 @@
 			]
 		},
 		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "Review, Create One",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/review/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"review",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Review, Read All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/review",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Review, Read One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/review/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"review",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Review, Update One",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/review/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"review",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Review, Delete One",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/review/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"review",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "User",
 			"item": [
 				{
