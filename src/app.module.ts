@@ -6,8 +6,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 // Custom Modules
 import { Business, Directory, FAQ, NonProfit, Podcast, User } from './database';
 import { AccountModule } from './account/account.module';
-import { UserModule } from './user/user.module';
 import { BusinessModule } from './business/business.module';
+import { DirectoryModule } from './directory/directory.module';
+import { UserModule } from './user/user.module';
 
 // create module from decorator
 @Module({
@@ -27,6 +28,7 @@ import { BusinessModule } from './business/business.module';
         }),
         AccountModule,
         BusinessModule,
+        DirectoryModule,
         UserModule
     ],
     controllers: [],
