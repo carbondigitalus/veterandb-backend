@@ -637,42 +637,102 @@
 			]
 		},
 		{
-			"name": "Podcasts",
+			"name": "Podcast",
 			"item": [
 				{
-					"name": "Podcasts, All",
+					"name": "Podcast, Create One",
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/podcasts/{{populate}}",
+							"raw": "{{url}}/api/{{apiVersion}}/podcast/",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
-								"podcasts",
-								"{{populate}}"
+								"{{apiVersion}}",
+								"podcast",
+								""
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Podcasts, One",
+					"name": "Podcast, Read All",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/podcasts/1/{{populate}}",
+							"raw": "{{url}}/api/{{apiVersion}}/podcast",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
-								"podcasts",
-								"1",
-								"{{populate}}"
+								"{{apiVersion}}",
+								"podcast"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Podcast, Read One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/podcast/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"podcast",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Podcast, Update One",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/podcast/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"podcast",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Podcast, Delete One",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/podcast/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"podcast",
+								"1"
 							]
 						}
 					},
@@ -681,7 +741,7 @@
 			]
 		},
 		{
-			"name": "Users",
+			"name": "User",
 			"item": [
 				{
 					"name": "User, Create One",
