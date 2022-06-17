@@ -1,5 +1,12 @@
 // NPM Modules
-import { Controller, Delete, Get, Post, UseGuards } from '@nestjs/common';
+import {
+    Controller,
+    Delete,
+    Get,
+    Patch,
+    Post,
+    UseGuards
+} from '@nestjs/common';
 import { User } from './../database';
 
 // Custom Modules
@@ -10,28 +17,32 @@ import { GetUserData } from './../utils/decorators';
 // create controller with /users endpoint
 // create user controller class
 @UseGuards(JWTGuard)
-@Controller('users')
+@Controller('user')
 export class UserController {
     // create constructor
     // access user service data
     constructor() {}
 
-    // route: /users
+    // route: /user
     @Post()
     userCreateOne() {}
 
-    // route: /users/:id
-    @Delete(':id')
-    userDeleteOne() {}
-
-    // route: /users
+    // route: /user
     @Get()
-    usersGetAll() {}
+    userReadAll() {}
 
-    // create get request for /users/:id
     // get user formatted as user
+    // route: /user/:id
     @Get(':id')
-    usersGetOne(@GetUserData() user: User) {
+    userReadOne(@GetUserData() user: User) {
         return user;
     }
+
+    // route: /user/:id
+    @Patch(':id')
+    userUpdateOne() {}
+
+    // route: /user/:id
+    @Delete(':id')
+    userDeleteOne() {}
 }
