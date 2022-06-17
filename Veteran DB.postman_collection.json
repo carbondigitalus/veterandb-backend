@@ -328,39 +328,99 @@
 			"name": "Directory",
 			"item": [
 				{
-					"name": "Directory, All",
+					"name": "Directory, Create One",
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/directories/{{populate}}",
+							"raw": "{{url}}/api/{{apiVersion}}/directory/",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
-								"directories",
-								"{{populate}}"
+								"{{apiVersion}}",
+								"directory",
+								""
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Directory, One",
+					"name": "Directory, Read All",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/directories/1/{{populate}}",
+							"raw": "{{url}}/api/{{apiVersion}}/directory",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
-								"directories",
-								"1",
-								"{{populate}}"
+								"{{apiVersion}}",
+								"directory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Directory, Read One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/directory/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"directory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Directory, Update One",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/directory/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"directory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Directory, Delete One",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/directory/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"directory",
+								"1"
 							]
 						}
 					},
@@ -372,39 +432,99 @@
 			"name": "FAQ",
 			"item": [
 				{
-					"name": "FAQ, All",
+					"name": "FAQ, Create One",
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/faqs/{{populate}}",
+							"raw": "{{url}}/api/{{apiVersion}}/faq/",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
-								"faqs",
-								"{{populate}}"
+								"{{apiVersion}}",
+								"faq",
+								""
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "FAQ, One",
+					"name": "FAQ, Read All",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/faqs/1/{{populate}}",
+							"raw": "{{url}}/api/{{apiVersion}}/faq",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
-								"faqs",
-								"1",
-								"{{populate}}"
+								"{{apiVersion}}",
+								"faq"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FAQ, Read One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/faq/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"faq",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FAQ, Update One",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/faq/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"faq",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FAQ, Delete One",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/faq/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"faq",
+								"1"
 							]
 						}
 					},
