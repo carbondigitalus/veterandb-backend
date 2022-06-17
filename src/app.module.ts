@@ -11,6 +11,7 @@ import { DirectoryModule } from './directory/directory.module';
 import { UserModule } from './user/user.module';
 import { FAQModule } from './faq/faq.module';
 import { NonProfitModule } from './nonprofit/nonprofit.module';
+import { PodcastModule } from './podcast/nonprofit.module';
 
 // create module from decorator
 @Module({
@@ -33,6 +34,7 @@ import { NonProfitModule } from './nonprofit/nonprofit.module';
         DirectoryModule,
         FAQModule,
         NonProfitModule,
+        PodcastModule,
         UserModule
     ],
     controllers: [],
