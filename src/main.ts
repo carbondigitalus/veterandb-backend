@@ -5,6 +5,7 @@ import { NestExpressApplication } from '@nestjs/platform-express';
 
 // Custom Modules
 import { AppModule } from './app.module';
+import { DataResponseInterceptor } from './utils/interceptors';
 
 async function bootstrap() {
     // create express based app
@@ -32,6 +33,7 @@ async function bootstrap() {
             '/register'
         ]
     });
+    app.useGlobalInterceptors(new DataResponseInterceptor());
 
     // listen on express app port
     await app.listen(8000);
