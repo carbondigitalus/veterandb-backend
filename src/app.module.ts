@@ -8,10 +8,10 @@ import { Business, Directory, FAQ, NonProfit, Podcast, User } from './database';
 import { AccountModule } from './account/account.module';
 import { BusinessModule } from './business/business.module';
 import { DirectoryModule } from './directory/directory.module';
-import { UserModule } from './user/user.module';
 import { FAQModule } from './faq/faq.module';
 import { NonProfitModule } from './nonprofit/nonprofit.module';
 import { PodcastModule } from './podcast/podcast.module';
+import { UserModule } from './user/user.module';
 
 // create module from decorator
 @Module({
