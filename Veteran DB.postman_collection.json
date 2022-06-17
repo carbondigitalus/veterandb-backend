@@ -1,0 +1,608 @@
+{
+	"info": {
+		"_postman_id": "52edae7b-d3fa-4356-bd5a-dc47953f15f5",
+		"name": "Veteran DB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9288567"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "Account, Deactivate",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/account/deactivate",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"account",
+								"deactivate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account, Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"jared@carbondigital.us\",\n\t\"password\": \"{{password}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/account/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"account",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account, Logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/account/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"account",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account, Password Forgot",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/account/password-forgot",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"account",
+								"password-forgot"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account, Password Reset",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/account/password-reset/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"account",
+								"password-reset",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account, Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"jared@carbondigital.us\",\n\t\"password\": \"{{password}}\",\n\t\"passwordConfirm\": \"{{password}}\",\n    \"firstName\": \"Jared\",\n    \"lastName\": \"Ledbetter\",\n    \"userRole\": \"employee-super-admin\",\n    \"accountType\": \"veteran\",\n    \"accountVerifyStatus\": [\"email\", \"sms\", \"veteran\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/account/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"account",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account, Update Profile",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/account/update-profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"account",
+								"update-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account, Update Settings",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/account/update-settings",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"account",
+								"update-settings"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "34388ecc8cc4e82da33a288cb103b758612ab0a338b135e2d449c200d0e41b2390c86970f991f03ae9505adee887be38a0a081898282dfc6a6bcba6dbe1f8de868ad25d0849fe0968ba6a9e656a82b5736ee54013ee3114aa097825cecac55155f3e537b60c9441f4304c15828c634261c1b1931778b719d4474d97694515153",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Business",
+			"item": [
+				{
+					"name": "Business, Create One",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/business/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"business",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Business, Read All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/business",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"business"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Business, Read One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/business/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"business",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Business, Update One",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/business/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"business",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Business, Delete One",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/business/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"business",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Directory",
+			"item": [
+				{
+					"name": "Directory, All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/directories/{{populate}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"directories",
+								"{{populate}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Directory, One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/directories/1/{{populate}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"directories",
+								"1",
+								"{{populate}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FAQ",
+			"item": [
+				{
+					"name": "FAQ, All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/faqs/{{populate}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"faqs",
+								"{{populate}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FAQ, One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/faqs/1/{{populate}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"faqs",
+								"1",
+								"{{populate}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Non-Profits",
+			"item": [
+				{
+					"name": "NPO, All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/npos/{{populate}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"npos",
+								"{{populate}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NPO, One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/npos/1/{{populate}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"npos",
+								"1",
+								"{{populate}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Podcasts",
+			"item": [
+				{
+					"name": "Podcasts, All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/podcasts/{{populate}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"podcasts",
+								"{{populate}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Podcasts, One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/podcasts/1/{{populate}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"podcasts",
+								"1",
+								"{{populate}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "User, Create One",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/user/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User, Read All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User, Read One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/user/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User, Update One",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/user/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User, Delete One",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/user/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
