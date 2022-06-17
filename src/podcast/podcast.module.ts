@@ -4,8 +4,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 // Custom Module
 import { Podcast } from 'src/database';
-import { PodcastController } from './nonprofit.controller';
-import { PodcastService } from './nonprofit.service';
+import { PodcastController } from './podcast.controller';
+import { PodcastService } from './podcast.service';
 
 @Module({
     imports: [TypeOrmModule.forFeature([Podcast])],
