@@ -533,42 +533,102 @@
 			]
 		},
 		{
-			"name": "Non-Profits",
+			"name": "NonProfit",
 			"item": [
 				{
-					"name": "NPO, All",
+					"name": "NonProfit, Create One",
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/npos/{{populate}}",
+							"raw": "{{url}}/api/{{apiVersion}}/nonprofit/",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
-								"npos",
-								"{{populate}}"
+								"{{apiVersion}}",
+								"nonprofit",
+								""
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "NPO, One",
+					"name": "NonProfit, Read All",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/api/npos/1/{{populate}}",
+							"raw": "{{url}}/api/{{apiVersion}}/nonprofit",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
-								"npos",
-								"1",
-								"{{populate}}"
+								"{{apiVersion}}",
+								"nonprofit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NonProfit, Read One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/nonprofit/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"nonprofit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NonProfit, Update One",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/nonprofit/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"nonprofit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NonProfit, Delete One",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/nonprofit/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"nonprofit",
+								"1"
 							]
 						}
 					},
