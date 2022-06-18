@@ -113,7 +113,7 @@ export default class User {
 
     @Column('date')
     @IsDate()
-    passwordChangedAt: Date;
+    passwordChangedAt?: Date;
 
     @Column({ default: null })
     @IsString()
