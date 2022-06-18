@@ -123,19 +123,6 @@ export default class User {
     @IsDate()
     passwordResetExpires?: Date;
 
-    // MIDDLEWARE
-    @BeforeInsert()
-    @BeforeUpdate()
-    async hashPassword(next: NextFunction) {
-        // If the password was not modified exit middleware
-        if (!this.password) return next();
-        // Hash the password with cost of 125
-        this.password = await argon.hash(this.password, {
-            hashLength: 60,
-            memoryCost: 4096
-        });
-        next();
-    }
     @BeforeInsert()
     @BeforeUpdate()
     async resetPasswordConfirmation(next: NextFunction) {
