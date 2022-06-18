@@ -102,7 +102,7 @@ export default class User {
         enum: AccountVerified,
         default: AccountVerified.None
     })
-    accountVerified: AccountVerified[];
+    accountVerified?: AccountVerified[];
 
     @Column({
         type: 'boolean',
