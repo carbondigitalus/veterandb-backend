@@ -117,7 +117,7 @@ export default class User {
 
     @Column({ default: null })
     @IsString()
-    passwordResetToken: string;
+    passwordResetToken?: string;
 
     @Column({ default: null })
     @IsDate()
