@@ -121,7 +121,7 @@ export default class User {
 
     @Column({ default: null })
     @IsDate()
-    passwordResetExpires: Date;
+    passwordResetExpires?: Date;
 
     // MIDDLEWARE
     @BeforeInsert()
