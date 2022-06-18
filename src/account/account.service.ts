@@ -52,8 +52,9 @@ export class AccountService {
             const hashedPassword = await argon.hash(data.password);
             // create user
             const user = await this.userRepository.create({
-                email: data.email,
-                password: hashedPassword
+                ...data,
+                password: hashedPassword,
+                passwordConfirm: hashedPassword
             });
 
             // return signed token after user creation
