@@ -111,7 +111,7 @@ export default class User {
     @IsBoolean()
     isActiveAccount: boolean;
 
-    @Column('date')
+    @Column({ type: 'date', default: null })
     @IsDate()
     passwordChangedAt?: Date;
 
