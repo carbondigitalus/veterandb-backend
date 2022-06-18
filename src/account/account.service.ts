@@ -58,8 +58,10 @@ export class AccountService {
                 passwordConfirm: hashedPassword
             });
 
+            await this.signToken(user.id, user.email);
+
             // return signed token after user creation
-            return this.signToken(user.id, user.email);
+            return this.userRepository.save(user);
         } catch (error) {
             if (error instanceof ForbiddenException) {
                 throw new ForbiddenException('Credentials taken');
