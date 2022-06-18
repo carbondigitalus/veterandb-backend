@@ -37,6 +37,7 @@ export class AccountService {
             user.password,
             data.password
         );
+
         // if password incorrect throw exception
         if (!passwordValidateSuccess)
             throw new ForbiddenException('Email or password incorrect.');
