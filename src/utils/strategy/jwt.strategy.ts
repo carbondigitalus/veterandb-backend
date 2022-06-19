@@ -32,7 +32,6 @@ export class JWTStrategy extends PassportStrategy(Strategy, 'jwt-validation') {
                 id: payload.sub
             }
         });
-        // delete user hash
         return user;
     }
 }
