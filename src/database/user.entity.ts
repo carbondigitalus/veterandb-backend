@@ -1,6 +1,3 @@
-// Core Modules
-const crypto = require('crypto');
-
 // NPM Modules
 import * as argon from 'argon2';
 import {
