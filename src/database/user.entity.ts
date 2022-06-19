@@ -1,5 +1,4 @@
 // NPM Modules
-import * as argon from 'argon2';
 import {
     IsBoolean,
     IsDate,
