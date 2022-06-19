@@ -15,6 +15,7 @@ import {
 import { AccountService } from './account.service';
 import { AccountLoginDTO } from './dto/login.dto';
 import { JWTGuard } from './../utils/guards';
+import { AccountRegisterDTO } from './dto/register.dto';
 
 // setup all subsequent controller methods to access jwt guard
 // route: /account
