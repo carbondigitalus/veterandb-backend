@@ -22,10 +22,6 @@ import {
     UserRole
 } from './../utils/enums';
 
-// Middlware Variables
-let candidatePassword: string;
-let userPassword: string;
-
 @Entity()
 export default class User {
     // COLUMNS
