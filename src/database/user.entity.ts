@@ -10,7 +10,6 @@ import {
     MaxLength,
     IsArray
 } from 'class-validator';
-import { NextFunction } from 'express';
 import {
     BeforeInsert,
     BeforeUpdate,
