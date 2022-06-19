@@ -10,13 +10,7 @@ import {
     MaxLength,
     IsArray
 } from 'class-validator';
-import {
-    BeforeInsert,
-    BeforeUpdate,
-    Column,
-    Entity,
-    PrimaryGeneratedColumn
-} from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 import 'reflect-metadata';
 
 // Custom Modules
