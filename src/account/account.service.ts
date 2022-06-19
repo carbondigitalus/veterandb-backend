@@ -64,7 +64,9 @@ export class AccountService {
             return this.userRepository.save(user);
         } catch (error) {
             if (error instanceof ForbiddenException) {
-                throw new ForbiddenException('Credentials taken');
+                throw new ForbiddenException(
+                    'User already exists. Please reset password.'
+                );
             }
             throw error;
         }
