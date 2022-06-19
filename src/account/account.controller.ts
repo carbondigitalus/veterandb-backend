@@ -52,7 +52,9 @@ export class AccountController {
 
     // route: /account/register
     @Post('register')
-    accountRegister() {}
+    accountRegister(@Body() data: AccountRegisterDTO) {
+        return this.accountService.register(data);
+    }
 
     // route: /account/update-profile
     @UseGuards(JWTGuard)
