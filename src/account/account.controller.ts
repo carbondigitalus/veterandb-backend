@@ -16,6 +16,7 @@ import { AccountService } from './account.service';
 import { JWTGuard } from './../utils/guards';
 import { GetUserData } from 'src/utils/decorators';
 import {
+    AccountActivateDTO,
     AccountDeactivateDTO,
     AccountLoginDTO,
     AccountRegisterDTO
@@ -28,6 +29,13 @@ export class AccountController {
     // create constructor
     // access user service data
     constructor(private accountService: AccountService) {}
+
+    // route: /account/deactivate
+    @UseGuards(JWTGuard)
+    @Post('activate')
+    accountActivate(@GetUserData() user: AccountActivateDTO) {
+        return this.accountService.activate(user);
+    }
 
     // route: /account/deactivate
     @UseGuards(JWTGuard)
