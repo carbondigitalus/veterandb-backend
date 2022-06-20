@@ -13,9 +13,13 @@ import {
 
 // Custom Modules
 import { AccountService } from './account.service';
-import { AccountLoginDTO } from './dto/login.dto';
 import { JWTGuard } from './../utils/guards';
-import { AccountRegisterDTO } from './dto/register.dto';
+import { GetUserData } from 'src/utils/decorators';
+import {
+    AccountDeactivateDTO,
+    AccountLoginDTO,
+    AccountRegisterDTO
+} from './dto';
 
 // setup all subsequent controller methods to access jwt guard
 // route: /account
@@ -28,7 +32,9 @@ export class AccountController {
     // route: /account/deactivate
     @UseGuards(JWTGuard)
     @Delete('deactivate')
-    accountDeactivate() {}
+    accountDeactivate(@GetUserData() user: AccountDeactivateDTO) {
+        return this.accountService.deactivate(user);
+    }
 
     // route: /account/login
     @HttpCode(HttpStatus.OK)
