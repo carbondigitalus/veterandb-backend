@@ -9,6 +9,7 @@ import { Repository } from 'typeorm';
 import { User } from 'src/database';
 import { AccountLoginDTO } from './dto/login.dto';
 import { AccountRegisterDTO } from './dto/register.dto';
+import { AccountDeactivateDTO } from './dto';
 
 // create injectable auth service
 @Injectable()
@@ -70,6 +71,27 @@ export class AccountService {
             }
             throw error;
         }
+    }
+
+    // create deactivate method
+    async deactivate(data: AccountDeactivateDTO) {
+        // find user
+        const user = await this.userRepository.findOne({
+            where: {
+                id: data.id
+            }
+        });
+
+        // modify user data before update
+        const updatedUser = await this.userRepository.preload({
+            id: user.id,
+            isActiveAccount: false
+        });
+        console.log('user', user);
+        console.log('user updated', updatedUser);
+
+        // set isActiveAccount to false
+        return this.userRepository.save(updatedUser);
     }
 
     // create sign token method
