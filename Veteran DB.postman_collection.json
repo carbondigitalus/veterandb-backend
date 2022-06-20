@@ -10,8 +10,48 @@
 			"name": "Account",
 			"item": [
 				{
+					"name": "Account, Activate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{apiVersion}}/account/activate",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{apiVersion}}",
+								"account",
+								"activate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Account, Deactivate",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
