@@ -87,8 +87,6 @@ export class AccountService {
             id: user.id,
             isActiveAccount: false
         });
-        console.log('user', user);
-        console.log('user updated', updatedUser);
 
         // set isActiveAccount to false
         return this.userRepository.save(updatedUser);
