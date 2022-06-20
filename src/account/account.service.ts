@@ -22,6 +22,24 @@ export class AccountService {
         private jwt: JwtService
     ) {}
 
+    // create deactivate method
+    async deactivate(data: AccountDeactivateDTO) {
+        // find user
+        const user = await this.userRepository.findOne({
+            where: {
+                id: data.id
+            }
+        });
+
+        // modify user data before update
+        const updatedUser = await this.userRepository.preload({
+            id: user.id,
+            isActiveAccount: false
+        });
+
+        // set isActiveAccount to false
+        return this.userRepository.save(updatedUser);
+    }
     // create login method
     async login(data: AccountLoginDTO) {
         // find the user by email
@@ -71,25 +89,6 @@ export class AccountService {
             }
             throw error;
         }
-    }
-
-    // create deactivate method
-    async deactivate(data: AccountDeactivateDTO) {
-        // find user
-        const user = await this.userRepository.findOne({
-            where: {
-                id: data.id
-            }
-        });
-
-        // modify user data before update
-        const updatedUser = await this.userRepository.preload({
-            id: user.id,
-            isActiveAccount: false
-        });
-
-        // set isActiveAccount to false
-        return this.userRepository.save(updatedUser);
     }
 
     // create sign token method
