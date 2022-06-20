@@ -2,6 +2,7 @@
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
+import * as cookieParser from 'cookie-parser';
 
 // Custom Modules
 import { AppModule } from './app.module';
@@ -33,8 +34,10 @@ async function bootstrap() {
             '/register'
         ]
     });
+    // setup global response wrapper for "data"
     app.useGlobalInterceptors(new DataResponseInterceptor());
-
+    // setup global use of cookies
+    app.use(cookieParser());
     // listen on express app port
     await app.listen(8000);
 }
