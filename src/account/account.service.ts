@@ -8,6 +8,7 @@ import { Repository } from 'typeorm';
 // Custom Modules
 import { User } from 'src/database';
 import {
+    AccountActivateDTO,
     AccountDeactivateDTO,
     AccountLoginDTO,
     AccountRegisterDTO
@@ -23,6 +24,25 @@ export class AccountService {
         private userRepository: Repository<User>,
         private jwt: JwtService
     ) {}
+
+    // create activate method
+    async activate(data: AccountActivateDTO) {
+        // find user
+        const user = await this.userRepository.findOne({
+            where: {
+                id: data.id
+            }
+        });
+
+        // modify user data before update
+        const updatedUser = await this.userRepository.preload({
+            id: user.id,
+            isActiveAccount: true
+        });
+
+        // set isActiveAccount to false
+        return this.userRepository.save(updatedUser);
+    }
 
     // create deactivate method
     async deactivate(data: AccountDeactivateDTO) {
@@ -42,6 +62,7 @@ export class AccountService {
         // set isActiveAccount to false
         return this.userRepository.save(updatedUser);
     }
+
     // create login method
     async login(data: AccountLoginDTO) {
         // find the user by email
