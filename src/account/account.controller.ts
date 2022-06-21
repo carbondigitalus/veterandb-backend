@@ -8,6 +8,7 @@ import {
     HttpStatus,
     Patch,
     Post,
+    Request,
     UseGuards
 } from '@nestjs/common';
 
@@ -21,6 +22,7 @@ import {
     AccountLoginDTO,
     AccountRegisterDTO
 } from './dto';
+import { SetCookies } from 'src/utils/decorators';
 
 // setup all subsequent controller methods to access jwt guard
 // route: /account
@@ -47,8 +49,8 @@ export class AccountController {
     // route: /account/login
     @HttpCode(HttpStatus.OK)
     @Post('login')
-    accountLogin(@Body() data: AccountLoginDTO) {
-        return this.accountService.login(data);
+    accountLogin(@Body() data: AccountLoginDTO, @Request() req) {
+        return this.accountService.login(data, req);
     }
 
     // route: /account/logout
