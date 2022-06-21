@@ -13,6 +13,7 @@ import {
     AccountLoginDTO,
     AccountRegisterDTO
 } from './dto';
+import { Request } from 'express';
 
 // create injectable auth service
 @Injectable()
