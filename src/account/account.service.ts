@@ -85,7 +85,27 @@ export class AccountService {
         if (!passwordValidateSuccess)
             throw new ForbiddenException('Email or password incorrect.');
         // return signed token if login successful
-        return this.signToken(user.id, user.email);
+        const token = await this.signToken(user.id, user.email);
+        const loginCookie = (req.cookies = [
+            {
+                name: 'veterandb-access',
+                value: token,
+                options: {
+                    expires: new Date(
+                        Date.now() +
+                            process.env.JWT_COOKIE_EXPIRES_IN *
+                                24 *
+                                60 *
+                                60 *
+                                1000
+                    ),
+                    httpOnly: true,
+                    secure: true
+                }
+            }
+        ]);
+
+        return loginCookie;
     }
 
     // create register method
