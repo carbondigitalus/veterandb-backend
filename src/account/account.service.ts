@@ -64,7 +64,7 @@ export class AccountService {
     }
 
     // create login method
-    async login(data: AccountLoginDTO) {
+    async login(data: AccountLoginDTO, req: Request) {
         // find the user by email
         const user = await this.userRepository.findOne({
             where: {
