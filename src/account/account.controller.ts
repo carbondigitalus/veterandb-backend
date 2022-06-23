@@ -54,8 +54,10 @@ export class AccountController {
 
     // route: /account/logout
     @UseGuards(JWTGuard)
-    @Get('logout')
-    accountLogout() {}
+    @Post('logout')
+    accountLogout(@Request() req, @Res() res) {
+        return this.accountService.logout(req, res);
+    }
 
     // route: /account/password-forgot
     @Post('password-forgot')
