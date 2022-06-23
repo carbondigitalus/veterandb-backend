@@ -71,11 +71,6 @@ export class AccountController {
         return this.accountService.register(data);
     }
 
-    // route: /account/update-profile
-    @UseGuards(JWTGuard)
-    @Patch('update-profile')
-    accountUpdateProfile() {}
-
     // route: /account/update-settings
     @UseGuards(JWTGuard)
     @Patch('update-settings')
