@@ -108,6 +108,15 @@ export class AccountService {
         return loginCookie;
     }
 
+    // create logout method
+    async logout(req: Request, res: Response) {
+        res.cookie('jwt', 'veterandb-logout-success', {
+            expires: new Date(Date.now() + 10 * 1000),
+            httpOnly: true
+        });
+        res.status(200).json({ status: 'success' });
+    }
+
     // create register method
     async register(data: AccountRegisterDTO) {
         // save the new user in the db
