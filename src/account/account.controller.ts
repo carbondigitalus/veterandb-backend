@@ -22,7 +22,6 @@ import {
     AccountLoginDTO,
     AccountRegisterDTO
 } from './dto';
-import { SetCookies } from 'src/utils/decorators';
 
 // setup all subsequent controller methods to access jwt guard
 // route: /account
