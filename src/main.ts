@@ -17,8 +17,8 @@ async function bootstrap() {
             whitelist: true
         })
     );
-    app.setBaseViewsDir(`${__dirname}/src/views`);
     app.useStaticAssets(join(__dirname, '..', 'public'));
+    app.setBaseViewsDir(join(__dirname, '..', 'views'));
     // add url prefix with exceptions
     app.setGlobalPrefix('api/v1', {
         exclude: [
