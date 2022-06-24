@@ -1,0 +1,15 @@
+extends base
+
+block content 
+  main.main.container-sm(style='margin-top: 200px;width:600px;margin-left: auto; margin-right: auto;background-color:lightblue; padding: 150px;')
+    form#loginForm
+      fieldset()
+        legend Login Form Sample
+        .mb-3
+          label.form-label(for='emailAddressTextInput') Email Address
+          input#emailAddressTextInput.form-control(type='text' placeholder='john.doe@customdomain.com')
+        .mb-3
+          label.form-label(for='passwordTextInput') Password
+          input#passwordTextInput.form-control(type='text' placeholder='*****')
+        button.btn.btn-primary(type='submit') Register
+
