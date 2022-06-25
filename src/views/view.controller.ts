@@ -1,12 +1,5 @@
 // NPM Modules
-import {
-    Controller,
-    Get,
-    HttpCode,
-    HttpStatus,
-    Render,
-    Res
-} from '@nestjs/common';
+import { Controller, Get, HttpCode, HttpStatus, Render } from '@nestjs/common';
 
 // Custom Modules
 import { ViewService } from './view.service';
