@@ -1,18 +1,24 @@
-import { login, register } from './account';
+import { login, logout, register } from './account';
 
 $(document).ready(function () {
     // DOM Elements
     const loginForm = $('#loginForm');
+    const logoutButton = $('#logoutButton');
     const registerForm = $('#registerForm');
 
-    loginForm.submit((event) => {
+    loginForm.on('submit', (event) => {
         event.preventDefault();
         const email = $('#email').val();
         const password = $('#password').val();
         login(email, password);
     });
 
-    registerForm.submit((event) => {
+    logoutButton.on('click', (event) => {
+        event.preventDefault();
+        logout();
+    });
+
+    registerForm.on('submit', (event) => {
         event.preventDefault();
         const firstName = $('#firstName').val();
         const lastName = $('#lastName').val();
