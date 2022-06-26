@@ -123,7 +123,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.login = void 0;
+exports.register = exports.login = void 0;
 
 var login = function login(email, password) {
   console.log('Begin capture email and password.');
@@ -150,6 +150,35 @@ var login = function login(email, password) {
 };
 
 exports.login = login;
+
+var register = function register(firstName, lastName, email, password, passwordConfirm) {
+  console.log('Begin capture form data.');
+  $.ajax({
+    method: 'post',
+    url: '/api/v1/account/register/',
+    data: {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      password: password,
+      passwordConfirm: passwordConfirm
+    }
+  }).done(function () {
+    console.log('POST: /api/v1/account/register/ | status: success');
+    setTimeout(function () {
+      window.location.assign('/');
+    }, 3000);
+  }).fail(function (error) {
+    console.log('POST: /api/v1/account/register/ | status: error');
+    console.log("Error Received: ".concat(error));
+    console.dir(error);
+    console.table(error);
+  }).always(function () {
+    console.log('POST: /api/v1/account/register/ | status: completed');
+  });
+};
+
+exports.register = register;
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
@@ -158,11 +187,21 @@ var _account = require("./account");
 $(document).ready(function () {
   // DOM Elements
   var loginForm = $('#loginForm');
+  var registerForm = $('#registerForm');
   loginForm.submit(function (event) {
     event.preventDefault();
     var email = $('#email').val();
     var password = $('#password').val();
     (0, _account.login)(email, password);
+  });
+  registerForm.submit(function (event) {
+    event.preventDefault();
+    var firstName = $('#firstName').val();
+    var lastName = $('#lastName').val();
+    var email = $('#email').val();
+    var password = $('#password').val();
+    var passwordConfirm = $('#passwordConfirm').val();
+    (0, _account.register)(firstName, lastName, email, password, passwordConfirm);
   });
 });
 },{"./account":"account.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
