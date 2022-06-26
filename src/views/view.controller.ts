@@ -10,6 +10,12 @@ export class ViewController {
     // create constructor
     constructor(private viewService: ViewService) {}
 
+    // route: /
+    @HttpCode(HttpStatus.OK)
+    @Get('/')
+    @Render('dashboard')
+    viewDashboard() {}
+
     // route: /login
     @HttpCode(HttpStatus.OK)
     @Get('login')
