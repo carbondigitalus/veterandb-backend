@@ -1,15 +1,15 @@
-extends base
+extends _layout
 
 block content 
-  main.main.container-sm(style='margin-top: 200px;width:600px;margin-left: auto; margin-right: auto;background-color:lightblue; padding: 150px;')
+  section.container-sm(style='margin-top: 200px;width:600px;margin-left: auto; margin-right: auto;background-color:lightblue; padding: 150px;')
     form#loginForm
       fieldset()
-        legend Login Form
+        legend(style='color: black') Login Form
         .mb-3
-          label.form-label(for='emailAddressTextInput') Email Address
-          input#emailAddressTextInput.form-control(type='text' placeholder='john.doe@domain.com')
+          label.form-label(for='emailAddressTextInput', style='color: black') Email Address
+          input#email.form-control(type='text' placeholder='john.doe@domain.com')
         .mb-3
-          label.form-label(for='passwordTextInput') Password
-          input#passwordTextInput.form-control(type='text' placeholder='**********')
+          label.form-label(for='passwordTextInput', style='color: black') Password
+          input#password.form-control(type='text' placeholder='**********')
         button.btn.btn-primary(type='submit') Login
 
