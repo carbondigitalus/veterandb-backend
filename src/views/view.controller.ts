@@ -21,4 +21,10 @@ export class ViewController {
     @Get('login')
     @Render('login')
     viewLogin() {}
+
+    // route: /register
+    @HttpCode(HttpStatus.OK)
+    @Get('register')
+    @Render('register')
+    viewRegister() {}
 }
