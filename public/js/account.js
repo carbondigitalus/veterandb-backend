@@ -25,6 +25,29 @@ export const login = (email, password) => {
         });
 };
 
+export const logout = () => {
+    console.log('Begin capture form data.');
+    $.ajax({
+        method: 'post',
+        url: '/api/v1/account/logout/'
+    })
+        .done(function () {
+            console.log('POST: /api/v1/account/logout/ | status: success');
+            setTimeout(() => {
+                window.location.assign('/login');
+            }, 3000);
+        })
+        .fail(function (error) {
+            console.log('POST: /api/v1/account/logout/ | status: error');
+            console.log(`Error Received: ${error}`);
+            console.dir(error);
+            console.table(error);
+        })
+        .always(function () {
+            console.log('POST: /api/v1/account/logout/ | status: completed');
+        });
+};
+
 export const register = (
     firstName,
     lastName,
