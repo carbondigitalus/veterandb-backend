@@ -1,7 +1,7 @@
 name: 🔬 Experimental Change
 description: Suggest an experimental or visionary improvement for this project.
-
-labels: ['vision', 'enhancement']
+labels: ['enhancement', 'pending triage']
+title: '[DATE]: [FEATURE NAME]'
 
 body:
     - type: markdown
