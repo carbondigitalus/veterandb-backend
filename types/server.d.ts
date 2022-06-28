@@ -1,4 +1,4 @@
-namespace NodeJS {
+declare namespace NodeJS {
     export interface ProcessEnv {
         PORT: number | undefined;
         PORT_DEV: PORT;
