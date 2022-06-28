@@ -1,7 +1,7 @@
 name: 🐞 Bug Report
-description: File a bug report.
-
-labels: ['bug']
+description: Report a problem that has been found in our system.
+labels: ['bug', 'pending triage']
+title: '[DATE]: [FEATURE NAME]'
 
 body:
     - type: markdown
