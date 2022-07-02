@@ -1,0 +1,68 @@
+/*===============
+Author: Carbon Digital
+Author URI: https://carbondigital.us/
+===============*/
+
+/*===============
+Utilities
+===============*/
+@import 'utilities/index';
+
+/*===============
+Base Styles
+===============*/
+@import 'base/index';
+
+/*===============
+Layout Styles
+===============*/
+@import 'layout/index';
+
+/*===============
+Modules
+===============*/
+@import 'modules/index';
+
+/*===============
+States
+===============*/
+@import 'states/index';
+
+#appMainKitList {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.kit__card {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 250px;
+    text-align: center;
+    border: solid 1px black;
+    padding: 20px;
+    margin: 20px;
+    &:hover {
+        background-color: black;
+        h2,
+        p {
+            color: white;
+        }
+    }
+    h2 {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    p {
+        margin-bottom: 5px;
+    }
+}
+.kit__thumbnail-img {
+    margin-bottom: 0;
+}

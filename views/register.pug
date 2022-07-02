@@ -1,0 +1,23 @@
+extends _layout
+
+block content 
+  section.container-sm(style='margin-top: 200px;width:600px;margin-left: auto; margin-right: auto;background-color:lightblue; padding: 150px;')
+    form#registerForm
+      fieldset()
+        legend(style='color: black') Register Form
+        .mb-3
+          label.form-label(for='firstName', style='color: black') First Name
+          input#firstName.form-control(type='text' placeholder='John')
+        .mb-3
+          label.form-label(for='lastName', style='color: black') Last Name
+          input#lastName.form-control(type='text' placeholder='Doe')
+        .mb-3
+          label.form-label(for='email', style='color: black') Email Address
+          input#email.form-control(type='text' placeholder='john.doe@domain.com')
+        .mb-3
+          label.form-label(for='password', style='color: black') Password
+          input#password.form-control(type='text' placeholder='**********')
+        .mb-3
+          label.form-label(for='passwordConfirm', style='color: black') Password Confirm
+          input#passwordConfirm.form-control(type='text' placeholder='**********')
+        button.btn.btn-primary(type='submit') Register

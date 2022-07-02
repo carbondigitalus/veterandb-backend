@@ -1,0 +1,51 @@
+// ==========================================================================
+// Form Elements
+// ==========================================================================
+
+.form {
+    @include bem_el(label) {
+        @include bem_mod(hidden) {
+            @extend .srt;
+        }
+        @include bem_el(checkbox) {
+            position: absolute;
+            top: 50%;
+            left: 50px;
+            transform: translateY(-50%);
+        }
+        color: $black;
+        display: block;
+        margin-bottom: em(10px);
+    }
+    @include bem_el(input) {
+        font-size: em(18px);
+        margin-bottom: em(20px, 18px);
+        border: 2px solid palette(primary, dark);
+        border-bottom: 6px solid palette(primary, dark);
+        border-radius: $bradius--default;
+        background: palette(neutral, xxx-light);
+        color: $black;
+        font-weight: $font-weight--light;
+
+        &:focus {
+            border-color: palette(primary, base);
+        }
+    }
+    @include bem_el(btn) {
+        @extend %btn;
+        background: palette(primary, base);
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    @include bem_el(group) {
+        position: relative;
+        display: flex;
+    }
+    @include bem_el(checkbox) {
+        width: 25px;
+        height: 25px;
+        background: palette(neutral, xxx-light);
+        border: 2px solid palette(primary, dark);
+        border-radius: $bradius--default;
+    }
+}

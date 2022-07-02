@@ -1,0 +1,38 @@
+// ==========================================================================
+// Nav
+// ==========================================================================
+
+.nav-link {
+    text-transform: uppercase;
+}
+.navbar {
+    position: relative;
+    @include mq(med) {
+        margin-top: em(5px);
+        margin-bottom: 0;
+    }
+}
+
+header {
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    @include bem_el(secondary) {
+        padding-top: 25px;
+        text-align: center;
+        color: black;
+        width: 100%;
+        &:hover {
+            border-bottom: solid 2px black;
+        }
+        @include bem_el(link) {
+            @include bem_mod(active) {
+                border-bottom: solid 2px black;
+            }
+        }
+    }
+}
