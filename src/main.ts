@@ -21,6 +21,7 @@ async function bootstrap() {
         })
     );
     app.useStaticAssets(join(__dirname, '..', 'public'));
+    app.setBaseViewsDir(join(__dirname, '..', 'views'));
     // add url prefix with exceptions
     app.setGlobalPrefix('api/v1', {
         exclude: [
