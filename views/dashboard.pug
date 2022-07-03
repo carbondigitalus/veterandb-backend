@@ -1,0 +1,13 @@
+extends _layout 
+
+block content  
+  section#appMainDashboard.bg-gray
+    div
+      h3#logoutButton(style='color: black; position: absolute; top: 50px; right: 50px; font-size: 24px; cursor: pointer;') Logout
+    div.container
+      div.header_secondary.flex.flex-justify-center
+        p.m-20.header_secondary_link-active VeteranDB Dashboard
+      hr
+    div#appMainKitList.dashboard-kit-cards
+      .kit__card
+        img.kit__thumbnail-img(src='/img/logo.png')
